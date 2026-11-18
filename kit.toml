@@ -1,0 +1,4 @@
+# study-kit settings: the thesis takes only the core writing rules from the kit
+
+[rules]
+copy = "docs/writing-rules.md"

@@ -5,20 +5,33 @@ breaks it, and an example of a violation with its fix. A reviewing agent
 reads every sentence of the abstract, the sections and the captions and
 reports each violation as file, line, rule id, the sentence, and a rewrite.
 
-This file is the portable core and is kept byte-identical across studies, so
-a diff against another study says immediately whether the rules have drifted.
-Everything specific to one paper -- its coined terms, its symbols, its venue,
-its own examples -- lives in `writing-terms.md` beside it, keyed by rule id.
+This file is the shared core. It comes from study-kit
+(https://github.com/DanielChahine004/study-kit) and every repository holds a
+copy that `pixi run kit-update` refreshes; a test fails if the copy drifts
+from the kit, so edit the rules there, never here.
+
+Everything specific to one writeup lives in its own annex, `writing-terms.md`
+beside this file, keyed by rule id: its coined terms, its symbols, its venue,
+its own examples. The annex may also
+- override a rule: it names the rule id and says how the rule reads for this
+  writeup (a thesis allows a chapter outline under R2, say); where the annex
+  and this file differ, the annex wins;
+- add a rule of its own, numbered L1, L2, ... so it never collides with a
+  core id.
 A reviewer reads both.
 
 ## Evidence
 
 E1. Every number in the prose points at a table or figure printed in the
-manuscript.
+manuscript. A result that carries an argument of the paper is printed in a
+table. A statistic of the method or a secondary check that has no table
+(event counts, gate tallies, a convergence or grid-step check) may stand in
+the prose alone if it is a \fact.
 Test: a sentence containing a numeral or a percentage either cites a
-table or figure, or repeats a number from a table or figure cited earlier
-in the same paragraph. "In the study record" and "in the repository" are
-not sources.
+table or figure, repeats a number from a table or figure cited earlier
+in the same paragraph, is arithmetic on numbers stated in the same
+sentence, or is a \fact for a method statistic or secondary check. "In
+the study record" and "in the repository" are not sources.
 Violation: "The estimator sits 1.3--3x above the bound."
 Fix: "The estimator sits 1.3--1.5x above the bound over the whole range
 (Table 1)."
@@ -49,6 +62,22 @@ that is not a design's name is a \fact, a \claim's or in a table.
 
 E5. A limitation is stated once, in the place it applies.
 Test: the same caveat does not appear in more than one section.
+
+E6. A trend carried by the argument is drawn as a figure in the body,
+and the numbers behind it are printed as a table in an appendix.
+Test: a body table whose rows sample an ordered parameter (a length, an
+index, a thickness, a time window) and whose argument is how a quantity
+changes along it is replaced in the body by a figure and moved to an
+appendix. A table stays in the body only when its rows are a few unordered
+configurations that a plot would not make clearer. A figure that would
+need more than four series in one panel is split into panels or replaced
+by the ratio the argument is about. The appendix table keeps every number
+the prose quotes, and the body cites both, as in "(Fig. 3, Table B2)". E1
+holds with an appendix table counting as printed.
+Violation: a seven-row table of a bound against a design parameter,
+carrying the claim that the bound is non-monotonic.
+Fix: the bound plotted against the parameter in the body, with the table
+in an appendix.
 
 ## Inference
 
@@ -139,6 +168,32 @@ conclusion ("Surface scattering recovers none of the gain").
 R10. No em-dashes and no parentheses carrying a clause.
 Test: a parenthesis holds a reference, a unit, a value or a short
 qualifier, not a sentence.
+
+R12. Name the physical or statistical object, not the computation that
+produced it.
+Test: a word the study's workflow uses for its own units of work (run,
+rerun, job, batch, family, pipeline, script, snapshot, output, record, a
+run-directory name) is replaced by what it stands for, namely a
+simulation, a configuration or design point, a fit, a bound, the estimator
+or the method. A sentence whose subject is a computation ("the l = 2 run
+gives") is rewritten with the configuration as subject ("at l = 2 mm the
+bound is"). The data and code availability statement, which describes the
+repository, is exempt.
+Violation: "Four runs of the T = 10 mm design keep an unscattered bulk".
+Fix: "Four simulations of the T = 10 mm design keep an unscattered bulk".
+
+R13. A caption identifies what is shown, in at most 60 words, or 80 for a
+figure of three or more panels or a table of more than six columns.
+Test: the caption names the quantity and its units, the design points or
+region, and the meaning of any mark, line style, bold or symbol not
+defined in the text. It holds no finding, no interpretation and no
+definition the method already gives. A finding belongs in the text that
+cites the figure, with its number. An appendix opens with one paragraph
+naming the sections its tables support, and a table has no separate
+lead-in that restates its caption.
+Violation: "(b) In the interior there is no minimum, and the bound falls
+monotonically to the shortest length tested."
+Fix: "(b) The 10 mm-inset interior."
 
 ## Precision
 
@@ -365,14 +420,21 @@ Then a count per rule. The reviewer does not edit the manuscript.
 
 ## Which rules are checked where
 
-E4 and the \claim half of E3 are enforced mechanically by
-`tests/test_paper.py` (step3_outputs/sources.py), and
-`report/sources-paper.md` lists the sentences that state a number with no
-source, for E1. The register,
-definition and paragraph rules are decidable by reading one file. E3, the
-outward half of E2, and the part of I1 that depends on what else has been
-published can only be checked against the literature, which the repository
-does not contain.
+The kit's tests (`studykit.testing`, collected by each repository's
+`tests/test_kit.py`) decide what a pattern can:
+- E1, E3 (the \claim half) and E4: every \fact and \claim holds and
+  `sources.tex` is current; `report/sources-<paper>.md` lists the sentences
+  that state a number with no source, for E1;
+- S1: an abbreviation's first use in the abstract and the introduction sits
+  inside its expansion;
+- S10 and units: a number is joined to its unit by a thin space;
+- figures: vector PDF in the papers' faces, drawn at the width it prints at,
+  no legend over the data, no lettering under the minimum size;
+- the build: no undefined reference, no line into the margin, the venue's
+  page and abstract limits.
 
-T1-T10 and S1-S9 are checked by reading, by the agent that writes the prose
-and by the reviewer. S10 is a grep.
+The register, definition and paragraph rules are decided by reading one
+file, by the agent that writes the prose and by the reviewer, as are T1-T10
+and S2-S9. E3, the outward half of E2, and the part of I1 that depends on
+what else has been published can only be checked against the literature,
+which the repository does not contain.

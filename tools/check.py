@@ -7,6 +7,7 @@ and its thesis annex, docs/writing-terms.md); everything else is for a reader.
 - units: a number joined to its unit by a units.tex shorthand (\\keV{511}), \\, or ~, never
   a plain space;
 - R10: no em-dash in prose;
+- the rules: docs/writing-rules.md is the pinned study-kit's core;
 - S1: each abbreviation in acronyms.tex spelled out at its first use in every chapter,
   "positron emission tomography (PET)"; software names in NAMES are exempt.
 
@@ -90,7 +91,18 @@ def abbreviations():
     return bad
 
 
+def rules_copy():
+    """docs/writing-rules.md is the installed study-kit's core; `pixi run kit-update` refreshes it."""
+    try:
+        from studykit import rules
+    except ImportError:
+        return ["rules: study-kit is not installed here (pixi install)"]
+    copy = ROOT / "docs" / "writing-rules.md"
+    same = copy.exists() and copy.read_text(encoding="utf-8").replace("\r\n", "\n") == rules.core()
+    return [] if same else ["rules: docs/writing-rules.md is not the kit's core: run `pixi run kit-update`"]
+
+
 if __name__ == "__main__":
-    found = build_log() + units_and_dashes() + abbreviations()
+    found = build_log() + units_and_dashes() + abbreviations() + rules_copy()
     print("\n".join(found) if found else "check: clean")
     sys.exit(1 if found else 0)
