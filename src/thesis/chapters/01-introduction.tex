@@ -34,7 +34,7 @@ Two materials sharing a value in Hounsfield units (HU), the CT measure of radiod
 A piecewise-linear rescaling of Hounsfield units is consequently applied, interpolating between air and water below the breakpoint and between water and cortical bone above it, to convert the CT image into a \keV{511} attenuation map \cite{Burger2002,Carney2006}.
 
 \paragraph{Scanner Anatomy}
-A PET scanner can be understood as being comprised of a chain of successive transductions, in which the signal is repeatedly converted from one carrier into another, with some information interface at every conversion.
+A PET scanner comprises a chain of successive transductions, where the signal is repeatedly converted from one carrier into another, with some information lost at every interface.
 The scanner's detectors are built around this chain. A scintillator converts an incoming annihilation photon into some thousands of optical photons, then a photodetector converts those into a charge pulse, and readout electronics amplify, digitise, and timestamp that pulse so that pairs of them can be sorted into coincidences and passed to a computer for reconstruction.
 Each conversion has both a multiplicity, which determines how much signal survives, and a resolution cost, which determines how well the event can be localised in time, space, and energy.
 The design of a scanner can be understood as optimising where in that chain to allocate more or less resources.
@@ -84,9 +84,11 @@ Almost nothing in Figure~\ref{fig:chain-emission} is under the designer's contro
 	\caption[What governs the fate of an annihilation photon]{%
 		The fate of a single \keV{511} annihilation photon, from emission to a recorded single carrying a valid LOR.
 		The figure is qualitative, since no scanner is assumed, the trunk is drawn as halving at each interface rather than to scale, and the ledger beneath gives the properties that raise or lower each surviving fraction together with its rough range.
-		Scattering is drawn as a terminal loss, because it invalidates the LOR, while the photon continues at reduced energy and may still be detected and recorded as a scattered coincidence. The trunk follows only those photons that retain a valid LOR.
-		Little of what is emitted survives as usable signal, and recovering the rest is a principal driver of the cost of PET \needcite{detector material as a driver of PET cost}. Losses to solid angle and crystal interaction are recovered with more detector material, whereas scattered coincidences are removed by corrections that subtract counts that are present but mispositioned.
-		Of the two dominant losses only solid angle is a design choice rather than a fixed cost of imaging a human, coverage ranging from the order of \qty{20}{\percent} in a conventional ring to as much as \qty{80}{\percent} in long axial field-of-view scanners \cite{Vandenberghe2020}.
+		Scattering is drawn as a terminal loss, because it invalidates the LOR, while the photon continues at reduced energy and may still be detected and recorded as a scattered coincidence.
+		The trunk follows only those photons that retain a valid LOR.
+		Little of what is emitted survives as usable signal, and recovering the rest is a principal driver of the cost of PET \needcite{detector material as a driver of PET cost}.
+		Losses to solid angle and crystal interaction are recovered with more detector material, whereas scattered coincidences are removed by corrections that subtract counts that are present but mispositioned.
+		Of the two dominant losses, solid angle and attenuation in the patient, only solid angle is a design choice rather than a fixed cost of imaging a human, coverage ranging from the order of \qty{20}{\percent} in a conventional ring to as much as \qty{80}{\percent} in long axial field-of-view scanners \cite{Vandenberghe2020}.
 		A coincidence requires both photons, so the per-photon terms compound while the solid-angle term does not, the photons being emitted back-to-back.
 		Axial length therefore enters the coincidence rate once, and crystal thickness and light yield twice.}
 	\label{fig:photon-flow}

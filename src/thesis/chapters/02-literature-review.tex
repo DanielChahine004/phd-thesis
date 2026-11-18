@@ -78,11 +78,11 @@ It first \emph{thermalises}, losing energy through Coulomb scattering with the s
 That annihilation converts the rest mass of the particle and anti-particle into two high-energy photons, each of \keV{511} in accordance with the energy--mass equivalence defined by $E=mc^2$.
 These are generally termed \emph{annihilation photons} rather than gamma rays, as they originate from outside the nucleus; they are the photons PET detects.
 The displacement between the point of emission and the point of annihilation is known as the \emph{positron range}, and because PET reconstructs the latter while the tracer chemistry occurs at the former, it constitutes a hard resolution limit that no detector design can recover from (\S\ref{sec:resolution-limits}).
-Projected onto the detector ring, this angular spread contributes a positional blur that grows linearly with ring diameter, approximately $0.0022D$ full width at half maximum (FWHM), so acollinearity is a modest penalty in preclinical systems but a leading resolution term in large-bore clinical scanners.
 
 \paragraph{LOR Formation}
 Because the annihilating pair is very nearly at rest, conservation of momentum requires that the two photons be emitted almost exactly back-to-back.
-The pair is not quite at rest, however, and its residual momentum spreads the opening angle about \degs{180} with a full width at half maximum of roughly \degs{0.5} \cite{Colombino1965}.
+The pair is not quite at rest, however, and its residual momentum spreads the opening angle about \degs{180} with a full width at half maximum (FWHM) of roughly \degs{0.5} \cite{Colombino1965}.
+Projected onto a detector ring of diameter $D$, this acollinearity contributes a positional blur that grows linearly with the diameter, approximately $0.0022D$ FWHM \needcite{the 0.0022D acollinearity blur}, so it is a modest penalty in preclinical systems but a leading resolution term in large-bore clinical scanners.
 Detecting both annihilation photons in opposite detector elements therefore constrains the annihilation to have occurred somewhere along the straight line joining them, termed the \emph{line of response} (LOR).
 Without TOF, nothing localises the annihilation along the LOR of a single coincidence event, and tomographic reconstruction recovers the source distribution from the intersection of many LORs.
 TOF-PET, by resolving the difference in the two photons' arrival times, can additionally estimate where along each LOR the annihilation likely took place.
@@ -162,7 +162,7 @@ These carriers then migrate, some binding into excitons and some lost to trappin
 Because the activator levels lie within the band gap, the emitted photons are too low in energy to re-excite the host, and the crystal remains transparent to its own light.
 Every scintillator must also emit below its own excitation gap, or the bulk would reabsorb the light before it reached a photodetector, and the three mechanisms below differ in how they bring the emission under the gap, here by an activator level inside it.
 
-The number of electron--hole pairs created by a deposit of energy $E$ scales as $E/\beta E_\mathrm{g}$, where $E_\mathrm{g}$ is the band gap of the host and $\beta \approx 2$--$3$ is the factor by which the average energy cost of one thermalised pair exceeds that gap, the excess being lost to the phonons emitted during thermalisation.
+The number of electron--hole pairs created by a deposit of energy $E$ scales as $E/(\xi E_\mathrm{g})$, where $E_\mathrm{g}$ is the band gap of the host and $\xi \approx 2$--$3$ is the factor by which the average energy cost of one thermalised pair exceeds that gap, the excess being lost to the phonons emitted during thermalisation.
 The band gap therefore sets a hard ceiling on light yield before any transport or quantum-efficiency losses are counted \cite{Lempicki1993}.
 
 The activator of the third stage is the most common luminescence centre but not the only one, and the figure draws that case alone.
@@ -198,7 +198,7 @@ Intersystem crossing diverts some excitations to $T_1$, from which direct radiat
 There is therefore one emitting transition fed by two paths, one fast and one slow, and because densely ionising particles produce more triplets the slow fraction depends on particle type, the dependence that pulse-shape discrimination exploits.
 
 Practical plastics are ternary systems in which a polymer base such as polyvinyltoluene absorbs most of the deposited energy and transfers it non-radiatively by F\"orster dipole--dipole coupling to a primary fluor present at a few per cent by mass (typically around one), which is the molecule whose levels the diagram describes, with a wavelength shifter at a far lower concentration moving the emission to longer wavelengths to match the photodetector and limit self-absorption.
-Since the emitting species is the bulk itself rather than a dilute dopant, composition is locked to carbon and hydrogen, and the light yield and effective atomic number cannot be raised by doping as they can in an inorganic host.
+Since the base and the fluors are all hydrocarbons, composition is locked to carbon and hydrogen, and the effective atomic number cannot be raised by doping as it can in an inorganic host, short of loading the plastic with heavy atoms.
 The organic family therefore comprises the aromatic crystals (anthracene, stilbene), the liquid scintillators, the plastics, the newer organic glasses and the scintillating fibres drawn from them.
 Metal-loaded plastics (Pb, Sn, Bi, Gd) and nanoparticle-loaded composites remain organic by mechanism, the heavy atoms being there for stopping power rather than emission, except where the nanoparticle itself scintillates, in which case one slab carries both mechanisms.
 
@@ -342,10 +342,10 @@ Most of the deposited energy is dissipated in ionisation and in vibrational mode
 Of the excitations that do form by charge recombination, spin statistics favour triplets over singlets three to one, and the triplet branch contributes nothing to the prompt light.
 Ionisation quenching removes more: where the local energy-loss rate is high, excited molecules are quenched by damaged neighbours before they can fluoresce, an effect described empirically by Birks' law,
 \begin{equation}
-	\frac{\mathrm{d}L}{\mathrm{d}x} = \frac{S \, \mathrm{d}E/\mathrm{d}x}{1 + k_\mathrm{B} \, \mathrm{d}E/\mathrm{d}x},
+	\frac{\mathrm{d}L}{\mathrm{d}x} = \frac{\eta \, \mathrm{d}E/\mathrm{d}x}{1 + k_\mathrm{B} \, \mathrm{d}E/\mathrm{d}x},
 	\label{eq:birks}
 \end{equation}
-in which $L$ is the emitted light, $S$ the scintillation efficiency in the unquenched limit, and $k_\mathrm{B} \approx \qty{0.1}{\milli\metre\per\mega\electronvolt}$ in plastic sets the energy-loss rate above which the response ceases to be proportional.
+in which $L$ is the emitted light, $\eta$ the scintillation efficiency in the unquenched limit, and $k_\mathrm{B} \approx \qty{0.1}{\milli\metre\per\mega\electronvolt}$ in plastic sets the energy-loss rate above which the response ceases to be proportional.
 The consequence for PET is that plastics reach useful timing performance by way of speed rather than photon statistics, at the cost of energy resolution.
 
 \paragraph{The Low Effective-Z Problem}
