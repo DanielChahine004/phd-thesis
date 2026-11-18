@@ -8,5 +8,7 @@ rem the stale .dpth goes because tectonic leaves a file it would write empty.
 set "fig=%~1"
 set "fig=%fig:"=%"
 del /q "%fig%.dpth" 2>nul
-echo \makeatletter\def\tikzexternalrealjob{main}\AtEndDocument{\let\lrq@writeout\relax}\makeatother\input{main}> "%fig%.tex"
+rem the job is the figure name before its hyphen: main, or draft for the draft build
+for /f "delims=-" %%a in ("%fig%") do set "job=%%a"
+echo \makeatletter\def\tikzexternalrealjob{%job%}\AtEndDocument{\let\lrq@writeout\relax}\makeatother\input{%job%}> "%fig%.tex"
 "%~dp0..\.pixi\envs\default\Library\bin\tectonic.exe" --reruns 0 -Z search-path="%~dp0..\src\thesis" "%fig%.tex"

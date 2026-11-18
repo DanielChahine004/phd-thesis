@@ -12,6 +12,10 @@ root="$(cd "$(dirname "$0")/.." && pwd)"
 g() { git -C "$root" "$@" || abort "git $* failed"; }
 bib='src/thesis/references.bib'   # this repo's copy of thesis-papers' bibliography
 
+# --- 0. the claims: src/thesis/sources.tex and report/sources-thesis.* regenerated, each
+# \claim checked against the paperstore; reported, never blocking ---------------
+python -m studykit.sources thesis --check || echo 'claim problems above (not blocking the sync)'
+
 # --- 1. commit local work ------------------------------------------------
 
 branch="$(g rev-parse --abbrev-ref HEAD)"
@@ -44,10 +48,11 @@ git -C "$root" pull --rebase \
 
 # Overleaf, if this clone has it as a remote (git remote add overleaf <its git
 # URL>): the project holds src/thesis/ alone, and its edits since the last sync
-# are applied under src/thesis/ and committed (tools/overleaf.py)
+# are applied under src/thesis/ and committed, with the \claim markup kept off
+# Overleaf (study-kit's studykit.overleaf)
 overleaf="$(git -C "$root" remote | grep -x overleaf || true)"
 if [ -n "$overleaf" ]; then
-	uv run --quiet --python 3.12 --no-project python "$root/tools/overleaf.py" pull \
+	python -m studykit.overleaf pull thesis \
 		|| abort 'pulling Overleaf failed - see above'
 fi
 
@@ -77,6 +82,6 @@ else
 	echo 'nothing to push - already in sync'
 fi
 if [ -n "$overleaf" ]; then
-	uv run --quiet --python 3.12 --no-project python "$root/tools/overleaf.py" push \
+	python -m studykit.overleaf push thesis \
 		|| abort 'pushing to Overleaf failed - see above'
 fi

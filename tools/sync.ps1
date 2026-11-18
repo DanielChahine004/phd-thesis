@@ -27,6 +27,11 @@ function Invoke-Git {
 	return $out
 }
 
+# --- 0. the claims: src/thesis/sources.tex and report/sources-thesis.* regenerated, each
+# \claim checked against the paperstore; reported, never blocking ---------------
+python -m studykit.sources thesis --check
+if ($LASTEXITCODE -ne 0) { Write-Host 'claim problems above (not blocking the sync)' }
+
 # --- 1. commit local work ------------------------------------------------
 
 $branch = Invoke-Git rev-parse --abbrev-ref HEAD
@@ -66,10 +71,11 @@ if ($LASTEXITCODE -ne 0) {
 
 # Overleaf, if this clone has it as a remote (git remote add overleaf <its git
 # URL>): the project holds src/thesis/ alone, and its edits since the last sync
-# are applied under src/thesis/ and committed (tools/overleaf.py)
+# are applied under src/thesis/ and committed, with the \claim markup kept off
+# Overleaf (study-kit's studykit.overleaf)
 $overleaf = (git -C $root remote) -contains 'overleaf'
 if ($overleaf) {
-	uv run --quiet --python 3.12 --no-project python (Join-Path $root 'tools\overleaf.py') pull
+	python -m studykit.overleaf pull thesis
 	if ($LASTEXITCODE -ne 0) { throw 'pulling Overleaf failed - see above' }
 }
 
@@ -100,6 +106,6 @@ if ([int]$ahead -gt 0) {
 	Write-Host 'nothing to push - already in sync'
 }
 if ($overleaf) {
-	uv run --quiet --python 3.12 --no-project python (Join-Path $root 'tools\overleaf.py') push
+	python -m studykit.overleaf push thesis
 	if ($LASTEXITCODE -ne 0) { throw 'pushing to Overleaf failed - see above' }
 }

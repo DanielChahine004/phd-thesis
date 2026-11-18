@@ -1,4 +1,12 @@
-# study-kit settings: the thesis takes only the core writing rules from the kit
+# study-kit settings for the thesis: its core writing rules, and the \claim machinery
+# (studykit.sources: every citation's passage in the paperstore) with the Overleaf sync that
+# keeps that markup off Overleaf (studykit.overleaf)
+
+[papers.thesis]
+dir = "src/thesis"
+
+[checks]
+names = ["GATE", "STIR", "CASToR", "Geant4"]
 
 [rules]
 copy = "docs/writing-rules.md"

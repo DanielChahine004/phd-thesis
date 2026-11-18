@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write   # the drafts branch, where the paperstore viewer reads the linked draft
 
 # a run of `pixi run sync` can push several times in a minute; only the last
 # one is worth building
@@ -68,6 +68,19 @@ jobs:
       # the writing rules a pattern can decide; runs after the build because it reads the log
       - name: writing checks
         run: pixi run check
+
+      # the draft: every \claim marked and linked; published to the drafts branch as
+      # src/thesis/draft.pdf, where the paperstore viewer opens it beside the claims
+      - name: draft
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: pixi run draft
+      - name: publish the draft to the drafts branch
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          mkdir -p drafts-out/src/thesis && cp build/thesis-draft/draft.pdf drafts-out/src/thesis/draft.pdf
+          cd drafts-out && git init -q -b drafts && git add -A
+          git -c user.name=github-actions -c user.email=41898282+github-actions[bot]@users.noreply.github.com commit -qm "Draft of ${GITHUB_SHA::7}"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" drafts
 
       - name: collect
         run: |

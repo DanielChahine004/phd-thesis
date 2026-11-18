@@ -1,5 +1,7 @@
 # phd-thesis
 
+[Read it in the paperstore](https://danielchahine004.github.io/paperstore/?study=DanielChahine004/phd-thesis): the draft with every claim linked to the passage it rests on.
+
 PhD thesis in LaTeX, built with [Tectonic](https://tectonic-typesetting.github.io/)
 via [pixi](https://pixi.sh/). The thesis is also on Overleaf, kept in step by
 `pixi run sync` through Overleaf's git integration. The paper notes and their map are in

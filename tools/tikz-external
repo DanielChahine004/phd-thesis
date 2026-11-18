@@ -11,5 +11,6 @@ set -euo pipefail
 fig="${1//\"/}"
 root="$(cd "$(dirname "$0")/.." && pwd)"
 rm -f "$fig.dpth"
-printf '%s\n' '\makeatletter\def\tikzexternalrealjob{main}\AtEndDocument{\let\lrq@writeout\relax}\makeatother\input{main}' > "$fig.tex"
+job="${fig%-figure*}"   # main, or draft for the draft build
+printf '%s\n' "\\makeatletter\\def\\tikzexternalrealjob{$job}\\AtEndDocument{\\let\\lrq@writeout\\relax}\\makeatother\\input{$job}" > "$fig.tex"
 exec tectonic --reruns 0 -Z search-path="$root/src/thesis" "$fig.tex"

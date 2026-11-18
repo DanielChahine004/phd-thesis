@@ -1,0 +1,505 @@
+{
+ "paper": "thesis",
+ "title": "",
+ "repo": "https://github.com/DanielChahine004/phd-thesis",
+ "draft": "src/thesis/draft.pdf",
+ "facts": {},
+ "claims": [],
+ "unsourced": [
+  {
+   "file": "src/thesis/main.tex",
+   "line": 97,
+   "sentence": "{\\scshape\\Large \\thesisuniversity\\par} \\vspace{0.8ex} {\\scshape \\thesisfaculty\\par}"
+  },
+  {
+   "file": "src/thesis/main.tex",
+   "line": 106,
+   "sentence": "{\\huge\\bfseries \\thesistitle\\par} \\vspace{1.6ex} {\\Large \\thesissubtitle\\par}"
+  },
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 15,
+   "sentence": "The choice of carrier determines what the image means but not how it is formed, since all positron emitters are observed through the same \\keV{511} annihilation signature."
+  },
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 17,
+   "sentence": "\\paragraph{Annihilation and Coincidence Detection} Over time, the radionuclide decays, emitting positrons, which travel a short distance known as the positron range before annihilating with an electron and producing two approximately collinear \\keV{511} annihilation photons, a small fraction of which escape the subject's body without scattering and are detected by the PET scanner."
+  },
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 19,
+   "sentence": "The positron range depends on the emitter, from sub-millimetre for fluorine-18 to several millimetres for higher-energy emitters such as rubidium-82, and the residual momentum of the electron--positron pair at annihilation spreads the opening angle about \\degs{180} with a full width at half maximum of roughly \\degs{0.5} \\needcite{positron range by emitter and the acollinearity FWHM}."
+  },
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 31,
+   "sentence": "However, it does so at the effective energy of the polychromatic X-ray beam ($\\sim$\\keV{70} at a tube voltage of 120\\,kV \\needcite{effective CT beam energy at 120 kVp}) rather than at \\keV{511}."
+  },
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 32,
+   "sentence": "The attenuation coefficients at the two energies are not related by a single scale factor, since the photoelectric contribution is non-negligible in higher-Z materials such as bone and iodinated contrast agents, and scales steeply with atomic number, whereas at \\keV{511} it is negligible and attenuation is governed almost entirely by electron density."
+  },
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 33,
+   "sentence": "Two materials sharing a value in Hounsfield units (HU), the CT measure of radiodensity, may therefore differ in their attenuation at \\keV{511}."
+  },
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 44,
+   "sentence": "The thermoacoustic signal from a single \\keV{511} deposition for example is far below the noise floor of any practical transducer at clinical count rates."
+  },
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 47,
+   "sentence": "\\begin{figure}[p] \\centering \\input{figures/01-introduction/signal-chain-emission} \\caption[The PET signal chain, part 1: emission and transport]{ The PET signal chain, part~1, from administration to energy deposited in the detector."
+  },
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 55,
+   "sentence": "Figure~\\ref{fig:photon-flow} then takes stages~5 to~7 here and sets out what governs the losses at each of them.} \\label{fig:chain-emission} \\end{figure}"
+  },
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 59,
+   "sentence": "\\begin{figure}[p] \\centering \\input{figures/01-introduction/signal-chain-optical} \\caption[The PET signal chain, part 2: the optical domain]{ The PET signal chain, part~2, the optical domain, from the energy deposited in the crystal to optical photons arriving at the sensor face."
+  },
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 65,
+   "sentence": "Alternatives are denser here than in part~1 because every stage is a design decision rather than a fact of physics."
+  },
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 70,
+   "sentence": "\\begin{figure}[p] \\centering \\input{figures/01-introduction/signal-chain-readout} \\caption[The PET signal chain, part 3: readout and reconstruction]{ The PET signal chain, part~3, from the sensor face to the reconstructed image, continuing Figure~\\ref{fig:chain-optical}."
+  },
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 75,
+   "sentence": "The division between parts~2 and~3 is photon detection efficiency, the factor that converts an arriving optical photon into a detected one."
+  },
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 81,
+   "sentence": "\\begin{figure}[p] \\centering \\input{figures/01-introduction/photon-flow} \\caption[What governs the fate of an annihilation photon]{ The fate of a single \\keV{511} annihilation photon, from emission to a recorded single carrying a valid LOR."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 9,
+   "sentence": "\\section{Historical Development of Positron Emission Tomography} \\label{sec:history} \\topics{one compact narrative, not a chronicle, keeping only the milestones that set up the cost argument: origins (Anderson 1932; Wrenn 1951; Brownell \\& Sweet 1953); tomographic rings and reconstruction imported from CT (PETT series, 1970s); FDG (1976); the block detector (Casey \\& Nutt 1986) as the cost-defining innovation this thesis's monolithic approach displaces; septa removal and fully-3D; the BGO$\\rightarrow$LSO$\\rightarrow$SiPM/TOF lineage as a cost-versus-timing arc; long axial field-of-view systems (uEXPLORER, Biograph Quadra) and the sensitivity-for-price trade they embody.}"
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 23,
+   "sentence": "Tomography thus reached PET second-hand, since the ring scanners of the 1970s combined coincidence detection, already established, with reconstruction mathematics developed for single-photon and X-ray imaging."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 36,
+   "sentence": "The \\mins{110} half-life of \\textsuperscript{18}F is long enough to permit production at a cyclotron some distance from the scanner."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 45,
+   "sentence": "In the decades that followed, removing the septa between axially stacked detector rings and acquiring in fully-3D raised sensitivity several-fold at the cost of a much larger scattered fraction, and increasingly necessitated corrective algorithms to resolve it."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 50,
+   "sentence": "Silicon photomultipliers, developed over the late 1990s and 2000s, had by the early 2010s matured enough to warrant their adoption over traditional photomultiplier tubes, improving timing, compactness, and permitting operation inside a magnetic field."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 60,
+   "sentence": "Time-of-flight, demonstrated in 1983 and shelved until LSO offered the same timing without the loss of density and photofraction.} \\label{fig:pet-timeline} \\end{figure}"
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 69,
+   "sentence": "Two branches the conventional account omits, per Figure~\\ref{fig:chain-emission}: positronium (para versus ortho lifetimes, the three-photon channel, lifetime imaging as a live direction) and prompt-gamma emitters (\\textsuperscript{68}Ga, \\textsuperscript{124}I, \\textsuperscript{44}Sc), whose third photon makes a triple coincidence that localises along the LOR without TOF."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 78,
+   "sentence": "That annihilation converts the rest mass of the particle and anti-particle into two high-energy photons, each of \\keV{511} in accordance with the energy--mass equivalence defined by $E=mc^2$."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 85,
+   "sentence": "Projected onto a detector ring of diameter $D$, this acollinearity contributes a positional blur that grows linearly with the diameter, approximately $0.0022D$ FWHM \\needcite{the 0.0022D acollinearity blur}, so it is a modest penalty in preclinical systems but a leading resolution term in large-bore clinical scanners."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 97,
+   "sentence": "Earlier BGO-based scanners, with substantially poorer intrinsic timing, required windows of 10--12\\,ns \\needcite{coincidence windows of BGO-based scanners}."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 111,
+   "sentence": "\\subsection{Radionuclides and Radiotracers} \\label{sec:radiotracers} \\topics{brief, for context only: cyclotron isotopes (\\textsuperscript{18}F, \\textsuperscript{11}C) and generator isotopes (\\textsuperscript{68}Ga, \\textsuperscript{82}Rb) and the half-life logistics that tie a scanner to its tracer supply; FDG as the workhorse and the targeted tracers (PSMA, amyloid and tau) that are widening demand; the one cost point that matters here: tracer supply is a cost lever independent of the scanner, so scanner cost is the lever this thesis pulls.}"
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 123,
+   "sentence": "Resolution limits: positron range; $\\sim$0.25\\textdegree{} acollinearity and its ring-diameter dependence; detector pitch; the resolution budget in quadrature; why sub-mm whole-body PET is physics-limited."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 123,
+   "sentence": "Photon interactions: Beer--Lambert $I = I_0 e^{-\\mu x}$, the basis of attenuation correction and the Siddon path integrals (\\S\\ref{sec:system-matrix}); photoelectric absorption and its steep effective-$Z$ dependence, the crux of plastic versus inorganic (\\S\\ref{sec:organic}); Compton scatter, $E' = E/[1 + (E/m_ec^2)(1-\\cos\\theta)]$ and the Klein--Nishina cross-section as working tools for the multi-vertex/Compton-camera direction; Compton dominance at \\keV{511} and its implications for detector thickness, inter-crystal scatter and sensitivity.}"
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 146,
+   "sentence": "\\subsection{Scintillation Mechanisms and Figures of Merit} \\label{sec:scintillation-mechanisms} \\topics{three distinct mechanisms: inorganic scintillation via band structure and activator dopants, organic via molecular $\\pi$-electron singlets, noble-element excimers as the third -- why the families behave so differently at \\keV{511}."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 148,
+   "sentence": "Within the inorganics the luminescence transition predicts timing: self-activated (BGO, PWO, CdWO\\textsubscript{4}), 5d$\\rightarrow$4f (Ce\\textsuperscript{3+}, Pr\\textsuperscript{3+}), s\\textsuperscript{2}-ion (Tl\\textsuperscript{+}, Eu\\textsuperscript{2+}), core--valence (BaF\\textsubscript{2}); only 5d$\\rightarrow$4f is dipole-allowed and fast, which explains the decay-time ordering better than any bulk property."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 148,
+   "sentence": "Then the figures of merit -- light yield, decay and rise time, density and effective Z, emission matching, energy resolution with non-proportionality as its dominant limit (why SrI\\textsubscript{2}:Eu beats NaI(Tl) at comparable yield), afterglow, hygroscopicity, machinability -- and which actually matter for a cost-driven design."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 159,
+   "sentence": "In every scintillator the \\keV{511} photon makes no light itself but, by photoelectric absorption or Compton scatter, liberates one energetic electron, and the light, its yield and its timing are the material's response to that electron."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 161,
+   "sentence": "These carriers then migrate, some binding into excitons and some lost to trapping or non-radiative quenching, until they are captured at luminescence centres (typically an activator dopant, Ce\\textsuperscript{3+} in LSO and LYSO or Tl\\textsuperscript{+} in NaI), where they recombine radiatively and emit many lower-energy optical photons (visible or near-visible light)."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 165,
+   "sentence": "The number of electron--hole pairs created by a deposit of energy $E$ scales as $E/(\\xi E_\\mathrm{g})$, where $E_\\mathrm{g}$ is the band gap of the host and $\\xi \\approx 2$--$3$ is the factor by which the average energy cost of one thermalised pair exceeds that gap, the excess being lost to the phonons emitted during thermalisation."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 171,
+   "sentence": "The intrinsic alternatives are a self-trapped exciton, where the pair distorts the lattice around itself and that relaxation takes energy out before emission (undoped CsI, the slow component of BaF\\textsubscript{2}); a self-activated host, where a constituent ion of the lattice acts as its own centre with a large Stokes shift (Bi\\textsuperscript{3+} in BGO, the tungstate group in PWO and CdWO\\textsubscript{4}); core--valence luminescence, where a valence electron fills a core hole and the photon carries the core--valence spacing, smaller than the gap in the few crystals that show it, with no thermalised carriers involved at all (the sub-nanosecond fast component of BaF\\textsubscript{2}, CsF); and, in direct-gap semiconductors and perovskites, a free or confined exciton, whose emission sits only just below the gap, so that self-absorption is a real limit and these are used thin or as nanocrystals."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 174,
+   "sentence": "By mechanism, then, the inorganic family takes in the halides (NaI:Tl, CsI:Tl, LaBr\\textsubscript{3}:Ce, CeBr\\textsubscript{3}, SrI\\textsubscript{2}:Eu, BaF\\textsubscript{2}), the oxides and garnets, among them BGO, LSO, LYSO and gadolinium aluminium gallium garnet (GAGG), whether grown as crystals or sintered as transparent ceramics, Ce-doped glasses, and the semiconductor and perovskite scintillators, the hybrid organic--inorganic perovskites included, since their light comes from the inorganic lead-halide framework and not from the organic cation."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 191,
+   "sentence": "The scintillating species is an aromatic hydrocarbon whose delocalised $\\pi$-electron system supports a ladder of singlet ($S_0$, $S_1$, $S_2$, \\dots) and triplet ($T_1$, \\dots) states, each subdivided into vibrational sublevels."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 192,
+   "sentence": "The same fast electron, liberated by the \\keV{511} photon as before, excites $\\pi$ electrons into the upper singlets, which relax non-radiatively to $S_1$ by internal conversion within picoseconds; the $S_1 \\rightarrow S_0$ transition then fluoresces in \\qtyrange{1}{3}{\\nano\\second}."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 194,
+   "sentence": "Because fluorescence terminates on vibrationally excited sublevels of $S_0$, the emitted photon is lower in energy than the $S_0 \\rightarrow S_1$ absorption and the material is transparent to its own light, the same requirement as before, here met by a vibrational offset where the inorganic uses an activator level inside the gap."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 197,
+   "sentence": "Intersystem crossing diverts some excitations to $T_1$, from which direct radiative decay (phosphorescence) is spin-forbidden, slow and dim, and what returns that energy as light is the bimolecular annihilation of two $T_1$ excitations, $T_1 + T_1 \\rightarrow S_1 + S_0$, which regenerates $S_1$ so that the ordinary $S_1 \\rightarrow S_0$ fluorescence occurs hundreds of nanoseconds late."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 211,
+   "sentence": "The triplet detour is the second route to the same $S_1 \\rightarrow S_0$ emission."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 212,
+   "sentence": "Phosphorescence direct from $T_1$ is spin-forbidden and contributes little light, while annihilation of two triplets refills $S_1$ and the ordinary fluorescence then comes late, which is what pulse-shape discrimination reads."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 223,
+   "sentence": "As in any scintillator the \\keV{511} photon itself makes no light but liberates one fast electron, which spends its energy along a track of a few millimetres ionising atoms (Xe $\\rightarrow$ Xe\\textsuperscript{+} + e\\textsuperscript{$-$}, at about \\qty{15.6}{\\electronvolt} a pair) and exciting others (Xe $\\rightarrow$ Xe\\textsuperscript{*})."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 224,
+   "sentence": "An isolated excited atom would emit at \\qty{147}{\\nano\\metre}, a resonance line that every neighbouring atom reabsorbs, so that light would never leave the liquid."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 225,
+   "sentence": "Instead, Xe\\textsuperscript{*}, unlike a ground-state atom, binds a neighbour within picoseconds into the excimer Xe\\textsubscript{2}\\textsuperscript{*} (Ar\\textsubscript{2}\\textsuperscript{*} in argon), a two-atom molecule that exists only while it is excited, and the ions reach the same state by a longer route, Xe\\textsuperscript{+} capturing first a neighbour and then an electron."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 226,
+   "sentence": "The excimer emits a vacuum-ultraviolet photon, at \\qty{178}{\\nano\\metre} in xenon and \\qty{128}{\\nano\\metre} in argon, and lands on a ground state that is unbound, so the pair falls apart."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 227,
+   "sentence": "With no ground-state dimer left to absorb at that wavelength, and the photon well below the \\qty{147}{\\nano\\metre} atomic resonance in energy, the liquid is transparent to its own light."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 231,
+   "sentence": "As in the organic case the excimer has a singlet and a triplet state, and the two give a prompt and a slow component, a few nanoseconds against roughly \\qty{27}{\\nano\\second} in xenon and against microseconds in argon, the ratio again depending on ionisation density.\\needcite{Aprile and Doke 2010 review for excimer timing, yields and the recombination component}"
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 233,
+   "sentence": "The light yield is high, comparable to NaI(Tl) in liquid xenon, and liquid xenon's density and atomic number ($\\qty{2.95}{\\gram\\per\\centi\\metre\\cubed}$, $Z=54$) make it a respectable absorber at \\keV{511}, so the mechanism is not dismissed on physics."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 246,
+   "sentence": "An excited atom, made directly or by recombination, binds a neighbour into the excimer Xe$_2^*$, which sits in a bound well."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 261,
+   "sentence": "\\begin{tabularx}{\\textwidth}{@{} >{\\raggedright\\arraybackslash}p{4.9cm} >{\\raggedright\\arraybackslash}p{4.0cm} >{\\raggedright\\arraybackslash}X @{}} \\toprule Luminescence centre & Class & Examples \\\\ \\midrule \\multicolumn{3}{@{}l@{}}{\\textbf{Inorganic}, band structure of the solid; emission from a level inside the gap} \\\\ \\addlinespace[3pt] Activator, 5d$\\rightarrow$4f (Ce\\textsuperscript{3+}, Pr\\textsuperscript{3+}) & halide, oxide, garnet crystals; ceramics; glasses & LaBr\\textsubscript{3}:Ce, LSO:Ce, LYSO:Ce, GAGG:Ce \\\\ \\addlinespace[3pt] Activator, s\\textsuperscript{2} ion (Tl\\textsuperscript{+}, Eu\\textsuperscript{2+}) & halide crystals & NaI:Tl, CsI:Tl, SrI\\textsubscript{2}:Eu \\\\ \\addlinespace[3pt] Self-activated host & oxide crystals & BGO, PWO, CdWO\\textsubscript{4} \\\\ \\addlinespace[3pt] Self-trapped exciton & undoped halides & CsI, BaF\\textsubscript{2} (slow component) \\\\ \\addlinespace[3pt] Core--valence & fluorides & BaF\\textsubscript{2} (fast component), CsF \\\\ \\addlinespace[3pt] Direct-gap exciton & semiconductors, perovskites & ZnO:Ga, CsPbBr\\textsubscript{3}, hybrid lead halides \\\\ \\midrule \\multicolumn{3}{@{}l@{}}{\\textbf{Organic}, $\\pi$ electrons of one molecule; emission offset by vibrational sublevels} \\\\ \\addlinespace[3pt] Fluorescence of the crystal & aromatic crystals & anthracene, stilbene \\\\ \\addlinespace[3pt] Fluorescence of a dissolved fluor & liquids\\newline plastics, glasses, fibres\\newline loaded composites & toluene or PXE with PPO, POPOP\\newline PVT with fluor and shifter (EJ-200)\\newline metal- or nanoparticle-loaded plastics \\\\ \\midrule \\multicolumn{3}{@{}l@{}}{\\textbf{Noble-element excimer}, a dimer made by the excitation; ground state unbound} \\\\ \\addlinespace[3pt] Xe\\textsubscript{2}\\textsuperscript{*} & liquid & xenon \\\\ \\addlinespace[3pt] Ar\\textsubscript{2}\\textsuperscript{*} & liquid, gas & argon, helium \\\\ \\midrule \\multicolumn{3}{@{}l@{}}{\\textbf{Not scintillation}, for contrast} \\\\ \\addlinespace[3pt] Cherenkov: no excited state & radiators & PbF\\textsubscript{2}, PWO in Cherenkov mode \\\\ \\addlinespace[3pt] Direct conversion: charge, no light & semiconductors & CdZnTe, TlBr \\\\ \\bottomrule \\end{tabularx} \\caption[A taxonomy of scintillators by mechanism]{ A taxonomy of scintillators by mechanism."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 316,
+   "sentence": "\\subsection{Inorganic Crystals and Ceramics} \\label{sec:inorganic} \\topics{property table across NaI(Tl), BGO, LSO:Ce, LYSO:Ce, GSO, BaF\\textsubscript{2}, LaBr\\textsubscript{3}."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 318,
+   "sentence": "Practical liabilities that disqualify materials the table flatters: \\textsuperscript{176}Lu/\\textsuperscript{138}La intrinsic radioactivity, hygroscopicity, thermal quenching (a cooling requirement, so a system cost), radiation damage, fragility."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 318,
+   "sentence": "The BGO renaissance for non-TOF high-sensitivity systems; Cherenkov and cross-luminescence (BaF\\textsubscript{2}) as the materials-side response to the \\ps{10} challenge.}"
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 334,
+   "sentence": "\\subsection{Organic Scintillators: Plastics and Liquids} \\label{sec:organic} \\topics{why the molecular mechanism is fast but low-yield; the low effective-Z problem: photofraction collapses at \\keV{511}, so interactions are overwhelmingly Compton; J-PET's response (Compton kinematics, axial plastic strips); manufacturability as the headline advantage -- no growth, no dicing, castable, cost per volume orders below LYSO; consequences for energy resolution and scatter rejection; the honest verdict on whether the cost win survives the sensitivity loss; a closing line on nanoparticle-loaded composites and metascintillators as the attempted middle ground (inorganic effective Z, organic manufacturability), still a promise rather than a result.}"
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 340,
+   "sentence": "A polyvinyltoluene-based plastic yields around \\num{10000} photons per \\unit{\\mega\\electronvolt} against roughly \\num{38000} for NaI(Tl), and the deficit has several independent causes."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 343,
+   "sentence": "Ionisation quenching removes more: where the local energy-loss rate is high, excited molecules are quenched by damaged neighbours before they can fluoresce, an effect described empirically by Birks' law, \\begin{equation} \\frac{\\mathrm{d}L}{\\mathrm{d}x} = \\frac{\\eta \\, \\mathrm{d}E/\\mathrm{d}x}{1 + k_\\mathrm{B} \\, \\mathrm{d}E/\\mathrm{d}x}, \\label{eq:birks} \\end{equation} in which $L$ is the emitted light, $\\eta$ the scintillation efficiency in the unquenched limit, and $k_\\mathrm{B} \\approx \\qty{0.1}{\\milli\\metre\\per\\mega\\electronvolt}$ in plastic sets the energy-loss rate above which the response ceases to be proportional."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 403,
+   "sentence": "Cherenkov: prompt, hence the \\ps{10} interest, but tens of photons and a directional cone (cross-reference \\S\\ref{sec:inorganic})."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 403,
+   "sentence": "Direct conversion (CdZnTe, TlBr): excellent energy resolution and intrinsic 3D positioning, against poor timing, charge trapping, and prohibitive cost at whole-body scale."
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 460,
+   "sentence": "\\subsection{Timing Performance and Time-of-Flight Readout} \\label{sec:tof-readout} \\topics{coincidence resolving time and its contributors (scintillator, SiPM, electronics); the TOF SNR gain relation; current state of the art ($\\sim$200--400~ps clinical) and the \\ps{10} challenge; what a monolithic slab costs in timing and whether TOF is worth its price in a cheap system.}"
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 473,
+   "sentence": "\\subsection{The Conventional Cylindrical Clinical Scanner} \\label{sec:cylindrical} \\topics{ring diameter and axial FOV conventions; crystal--block--module--ring hierarchy; representative NEMA NU-2 figures of flagship systems; why the cylinder became the default.}"
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 485,
+   "sentence": "\\subsection{Monolithic PET Programmes} \\label{sec:monolithic-programmes} \\topics{the research programmes that built scanners or detector modules around monolithic scintillator slabs, ordered so that each later programme answers a limitation of an earlier one: the Penn continuous NaI(Tl) plate line (HEAD PENN-PET, then the curved-plate C-PET; Anger-logic positioning with no DOI, and the stopping-power and count-rate limits of NaI(Tl) that ended it) \\needcite{Penn NaI(Tl) line: Karp and Muehllehner, HEAD PENN-PET c.\\ 1990 and C-PET}; the Delft monolithic line (LYSO slabs on APD and later SiPM readout, nearest-neighbour positioning, intrinsic DOI from the light distribution, then TOF-capable slabs and practical calibration) \\needcite{Delft lineage: Maas 2009, van der Laan 2010/2012, Borghi, Tabacchini and Schaart 2016 ``Towards monolithic scintillator based TOF-PET systems''}; cMiCE (University of Washington: monolithic LYSO slab, statistics-based positioning, ML-clustered DOI calibration, Cram\\'er--Rao bound as a design metric) \\needcite{cMiCE lineage: Joung 2002 original design, Ling 2007 DOI decoding, Miyaoka 2010 sensor-on-entrance-surface, Li 2012 CRLB evaluation}; the monolithic annulus (AnnPET, West Virginia) as the case where the slab is the whole ring \\needcite{AnnPET, WVU, three papers in order: Stolin et al.\\ ``Preclinical positron emission tomography scanner based on a monolithic annulus of scintillator: initial design study''; Jaliparthi et al.\\ 2021 ``Deep residual-convolutional neural networks for event positioning in a monolithic annular PET scanner''; Raylman et al.\\ 2025 ``A pre-clinical PET scanner based on a monolithic annulus of scintillator (AnnPET): construction and NU4-2008 performance testing''}; the UTOFPET consortium of Pisa and Ghent, from the thin-slab DigiPET small-animal scanner, through the Pisa block whose neural network estimates position and timestamp together and runs on an FPGA in the detector, to that block doubled in every dimension as the clinical-scale walk-through PET (WT-PET) detector \\needcite{UTOFPET lineage: Espa\\~na et al.\\ 2014 DigiPET; Carra et al.\\ 2021 NSS/MIC ``Towards the ideal PET detector''; Carra et al.\\ 2022 ``A neural network-based algorithm for simultaneous event positioning and timestamping in monolithic scintillators''; Vandenberghe et al.\\ 2023 EJNMMI 50(12) WT-PET system design, which names UTOFPET as the detector's origin; for the cost argument in its original ring form, Vandenberghe et al.\\ 2018 PET20.0 (abstract), and for the panel geometry's own account of what it costs, Dadgar et al.\\ 2023 EJNMMI Phys.\\ 10:75}; the i3M line in Valencia (preclinical monolithic LYSO, the Albira scanner as the first commercial monolithic system, the MINDView brain insert, and its own single-LYSO-tube rodent scanner) \\needcite{i3M Valencia: Benlloch and Gonz\\'alez group papers on Albira and MINDView; Gonz\\'alez et al.\\ 2018 Front.\\ Med.\\ single-tube feasibility; Freire et al.\\ 2022 IEEE TRPMS single-tube rodent scanner}; a third annulus, the HUST Wuhan monolithic scintillator ring, positioned by centre of gravity and by a neural network on the same ring \\needcite{Xu et al.\\ 2019 PMB, monolithic scintillator ring detector}; and the one comparison the annular programmes hand over ready-made: AnnPET and the i3M tube are faceted monolithic annuli of similar bore that both reach about \\mm{1.4} FWHM, one by a deep network with rebinned FBP, the other by centre-of-gravity positioning with a Voronoi calibration, so at that geometry the positioning method bought little that the calibration did not.}"
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 501,
+   "sentence": "\\subsection{Preclinical and Small-Animal Systems} \\label{sec:preclinical} \\topics{NEMA NU-4 evaluation and the sub-mm resolution demand; small-bore geometry effects (parallax, solid angle) that make DOI matter most where the ring is smallest; preclinical as the proving ground where most monolithic programmes (Section~\\ref{sec:monolithic-programmes}) first demonstrated.}"
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 603,
+   "sentence": "\\subsection{Monte Carlo Simulation as a Training Data Source} \\label{sec:monte-carlo} \\topics{Geant4/GATE and OpenGATE~10; optical photon transport fidelity; SiPM response modelling; dataset generation at scale on HPC; simulation cost versus measured calibration data.}"
+  }
+ ],
+ "given": [],
+ "given_file": "report/given-thesis.txt",
+ "unclaimed": [
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 31,
+   "sentence": "CT measures attenuation directly, and so can replace the radionuclide transmission scan that earlier PET systems required \\cite{Kinahan1998}.",
+   "keys": [
+    "Kinahan1998"
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 34,
+   "sentence": "A piecewise-linear rescaling of Hounsfield units is consequently applied, interpolating between air and water below the breakpoint and between water and cortical bone above it, to convert the CT image into a \\keV{511} attenuation map \\cite{Burger2002,Carney2006}.",
+   "keys": [
+    "Burger2002",
+    "Carney2006"
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 91,
+   "sentence": "Of the two dominant losses, solid angle and attenuation in the patient, only solid angle is a design choice rather than a fixed cost of imaging a human, coverage ranging from the order of \\qty{20}{\\percent} in a conventional ring to as much as \\qty{80}{\\percent} in long axial field-of-view scanners \\cite{Vandenberghe2020}.",
+   "keys": [
+    "Vandenberghe2020"
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 13,
+   "sentence": "\\paragraph{Origins} Positrons were discovered in 1932 by Carl Anderson, who observed the tracks of seemingly positively-charged electrons in a cloud chamber and interpreted them as the electron's antimatter counterpart \\cite{Anderson1933}.",
+   "keys": [
+    "Anderson1933"
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 16,
+   "sentence": "Wrenn and colleagues proposed using the back-to-back annihilation photons for coincidence localisation in 1951 \\cite{Wrenn1951}, and Brownell and Sweet built one of the first clinical positron scanners in 1953, comprised of a pair of sodium iodide detectors stepped mechanically across the head on a rectilinear gantry \\cite{Sweet1953}.",
+   "keys": [
+    "Wrenn1951",
+    "Sweet1953"
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 21,
+   "sentence": "Anger's scintillation camera of 1958 replaced mechanical scanning with a single large NaI(Tl) crystal viewed by an array of photomultiplier tubes, positioning each event from the centroid of the light distribution \\cite{Anger1958}, a stationary-detector, position-decoding architecture that PET block detectors would later inherit.",
+   "keys": [
+    "Anger1958"
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 22,
+   "sentence": "Kuhl and Edwards then demonstrated emission tomography itself in 1963, rotating a scanner about the patient and reconstructing transverse sections from the resulting projections \\cite{Kuhl1963}, several years before the equivalent was achieved with transmission X-rays \\cite{Hounsfield1973}.",
+   "keys": [
+    "Kuhl1963",
+    "Hounsfield1973"
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 25,
+   "sentence": "\\paragraph{The Move to Tomographic Rings} In 1961, a group at Brookhaven National Laboratory developed a ring of 32 sodium iodide-based coincidence detectors surrounding the head \\cite{Rankowitz1961}.",
+   "keys": [
+    "Rankowitz1961"
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 27,
+   "sentence": "By the late 1960s Brownell and the group at Massachusetts General Hospital had developed a so-called ``hybrid scanner'' comprised of two stationary planar 2D arrays of detectors, and by the early 1970s the group had developed a device of similar architecture known as the ``multi-crystal positron camera'', which had a field of view of $\\cm{27}\\times\\cm{30}$ \\cite{Burnham1972}.",
+   "keys": [
+    "Burnham1972"
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 28,
+   "sentence": "In the mid-1970s, Ter-Pogossian, Phelps and Hoffman built the positron emission transaxial tomograph (PETT) series, rings of scintillation detectors where every crystal was in coincidence with those opposite it, so that a single acquisition sampled the object along lines of response at many angles at once \\cite{Ter-Pogossian1975}.",
+   "keys": [
+    "Ter-Pogossian1975"
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 29,
+   "sentence": "The projections this produced were of exactly the form that filtered backprojection had been developed to invert, and the reconstruction was imported essentially intact from the single-photon and X-ray tomography described above \\cite{Phelps1975}.",
+   "keys": [
+    "Phelps1975"
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 34,
+   "sentence": "The synthesis of \\textsuperscript{18}F-fluorodeoxyglucose (FDG) in 1976 removed that constraint \\cite{Ido1978}.",
+   "keys": [
+    "Ido1978"
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 39,
+   "sentence": "\\paragraph{The Block Detector} The block detector, introduced by Casey and Nutt in 1986 \\cite{Casey1986}, in response to increasing demand, shifted focus towards cost-effective detector architectures to maximise the clinical utility of PET.",
+   "keys": [
+    "Casey1986"
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 47,
+   "sentence": "\\paragraph{Scintillators, Timing and Scale} In the 1980s, available fast-response scintillators such as BaF\\textsubscript{2} and CsF successfully demonstrated the advantages of time-of-flight (TOF) PET, but they had drawbacks, notably low density and low photofraction, which compromised performance enough for BGO to continue as the dominant PET scintillator \\cite{Moses2007}.",
+   "keys": [
+    "Moses2007"
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 49,
+   "sentence": "Lutetium oxyorthosilicate (LSO) in the late 1980s, and lutetium--yttrium oxyorthosilicate (LYSO) by the early 2000s, delivered the faster decay times that TOF-PET demanded without the density and photofraction drawbacks of predecessor scintillators, effectively reviving the technique and gaining popularity over BGO in spite of their slightly higher price \\cite{Moses2007}.",
+   "keys": [
+    "Moses2007"
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 51,
+   "sentence": "Most recently, long axial field-of-view systems such as the uEXPLORER and the Biograph Quadra have raised sensitivity by an order of magnitude by extending the axial length of the scanner to cover the whole body \\cite{Vandenberghe2020, SLHD2021}.",
+   "keys": [
+    "Vandenberghe2020",
+    "SLHD2021"
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 77,
+   "sentence": "It first \\emph{thermalises}, losing energy through Coulomb scattering with the surrounding medium over a path of length that typically ranges from a fraction of a millimetre to several millimetres (depending on the isotope) before combining with an electron at near-rest \\cite{Levin1999}.",
+   "keys": [
+    "Levin1999"
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 84,
+   "sentence": "The pair is not quite at rest, however, and its residual momentum spreads the opening angle about \\degs{180} with a full width at half maximum (FWHM) of roughly \\degs{0.5} \\cite{Colombino1965}.",
+   "keys": [
+    "Colombino1965"
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 96,
+   "sentence": "Contemporary clinical systems use windows of 4--6\\,ns, as on the Biograph Vision Quadra \\cite{Prenosil2022} and Biograph mMR \\cite{Karlberg2016}.",
+   "keys": [
+    "Prenosil2022",
+    "Karlberg2016"
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 166,
+   "sentence": "The band gap therefore sets a hard ceiling on light yield before any transport or quantum-efficiency losses are counted \\cite{Lempicki1993}.",
+   "keys": [
+    "Lempicki1993"
+   ]
+  }
+ ],
+ "problems": []
+}
