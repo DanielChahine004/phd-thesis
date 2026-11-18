@@ -56,7 +56,7 @@ demand, and measurements copied into a comment go stale the moment a label moves
 
 `docs/writing-rules.md` is the rubric, the core shared with the study papers through
 study-kit (https://github.com/DanielChahine004/study-kit, pinned in `pixi.toml`): edit the
-rules there, never here, and `pixi run kit-update` refreshes this copy. It and
+rules there, never here, and `pixi run kit-update` refreshes this copy.
 `docs/writing-terms.md` is the thesis annex: where the annex differs (a chapter
 outline, background in the literature review), it wins. `pixi run check` tests what
 a pattern can decide (the build log, units, em-dashes, abbreviations spelled out in
