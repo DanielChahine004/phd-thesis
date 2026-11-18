@@ -4,7 +4,262 @@
  "repo": "https://github.com/DanielChahine004/phd-thesis",
  "draft": "src/thesis/draft.pdf",
  "facts": {},
- "claims": [],
+ "claims": [
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 31,
+   "star": true,
+   "sentence": "CT measures attenuation directly, and so can replace the radionuclide transmission scan that earlier PET systems required \\cite{Kinahan1998}\\claim*{Kinahan1998/a74191}.",
+   "refs": [
+    "Kinahan1998/a74191"
+   ],
+   "said": []
+  },
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 34,
+   "star": true,
+   "sentence": "A piecewise-linear rescaling of Hounsfield units is consequently applied, interpolating between air and water below the breakpoint and between water and cortical bone above it, to convert the CT image into a \\keV{511} attenuation map \\cite{Burger2002,Carney2006}\\claim*{Burger2002/0f14c7,Carney2006/ce68d7,Carney2006/85b1a2}.",
+   "refs": [
+    "Burger2002/0f14c7",
+    "Carney2006/ce68d7",
+    "Carney2006/85b1a2"
+   ],
+   "said": [
+    511.0
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/01-introduction.tex",
+   "line": 91,
+   "star": true,
+   "sentence": "Of the two dominant losses, solid angle and attenuation in the patient, only solid angle is a design choice rather than a fixed cost of imaging a human, coverage ranging from the order of \\qty{20}{\\percent} in a conventional ring to as much as \\qty{80}{\\percent} in long axial field-of-view scanners \\cite{Vandenberghe2020}\\claim*{Vandenberghe2020/8338ba,Vandenberghe2020/7f38d9}.",
+   "refs": [
+    "Vandenberghe2020/8338ba",
+    "Vandenberghe2020/7f38d9"
+   ],
+   "said": [
+    20.0,
+    80.0
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 14,
+   "star": true,
+   "sentence": "\\paragraph{Origins} Positrons were discovered in 1932 by Carl Anderson, who observed the tracks of seemingly positively-charged electrons in a cloud chamber and interpreted them as the electron's antimatter counterpart \\cite{Anderson1933}\\claim*{Anderson1933/9b56e8}.",
+   "refs": [
+    "Anderson1933/9b56e8"
+   ],
+   "said": [
+    1932.0
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 16,
+   "star": true,
+   "sentence": "Wrenn and colleagues proposed using the back-to-back annihilation photons for coincidence localisation in 1951 \\cite{Wrenn1951}\\claim*{Wrenn1951/18681d}, and Brownell and Sweet built one of the first clinical positron scanners in 1953, comprised of a pair of sodium iodide detectors stepped mechanically across the head on a rectilinear gantry \\cite{Sweet1953}.",
+   "refs": [
+    "Wrenn1951/18681d"
+   ],
+   "said": [
+    1951.0,
+    1953.0
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 21,
+   "star": true,
+   "sentence": "Anger's scintillation camera of 1958 replaced mechanical scanning with a single large NaI(Tl) crystal viewed by an array of photomultiplier tubes, positioning each event from the centroid of the light distribution \\cite{Anger1958}\\claim*{Anger1958/dd2514,Anger1958/c7bb16}, a stationary-detector, position-decoding architecture that PET block detectors would later inherit.",
+   "refs": [
+    "Anger1958/dd2514",
+    "Anger1958/c7bb16"
+   ],
+   "said": [
+    1958.0
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 22,
+   "star": true,
+   "sentence": "Kuhl and Edwards then demonstrated emission tomography itself in 1963, rotating a scanner about the patient and reconstructing transverse sections from the resulting projections \\cite{Kuhl1963}, several years before the equivalent was achieved with transmission X-rays \\cite{Hounsfield1973}\\claim*{Hounsfield1973/fc8eab}.",
+   "refs": [
+    "Hounsfield1973/fc8eab"
+   ],
+   "said": [
+    1963.0
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 26,
+   "star": true,
+   "sentence": "\\paragraph{The Move to Tomographic Rings} In 1961, a group at Brookhaven National Laboratory developed a ring of 32 sodium iodide-based coincidence detectors surrounding the head \\cite{Rankowitz1961}\\claim*{Rankowitz1961/e416c7}.",
+   "refs": [
+    "Rankowitz1961/e416c7"
+   ],
+   "said": [
+    1961.0,
+    32.0
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 27,
+   "star": true,
+   "sentence": "By the late 1960s Brownell and the group at Massachusetts General Hospital had developed a so-called ``hybrid scanner'' comprised of two stationary planar 2D arrays of detectors, and by the early 1970s the group had developed a device of similar architecture known as the ``multi-crystal positron camera'', which had a field of view of $\\cm{27}\\times\\cm{30}$ \\cite{Burnham1972}\\claim*{Burnham1972/026348,Burnham1972/5b5093}.",
+   "refs": [
+    "Burnham1972/026348",
+    "Burnham1972/5b5093"
+   ],
+   "said": [
+    1960.0,
+    2.0,
+    1970.0,
+    27.0,
+    30.0
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 29,
+   "star": true,
+   "sentence": "The projections this produced were of exactly the form that filtered backprojection had been developed to invert, and the reconstruction was imported essentially intact from the single-photon and X-ray tomography described above \\cite{Phelps1975}\\claim*{Phelps1975/514189,Phelps1975/158f7c}.",
+   "refs": [
+    "Phelps1975/514189",
+    "Phelps1975/158f7c"
+   ],
+   "said": []
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 34,
+   "star": true,
+   "sentence": "The synthesis of \\textsuperscript{18}F-fluorodeoxyglucose (FDG) in 1976 removed that constraint \\cite{Ido1978}\\claim*{Ido1978/dbe5a1}.",
+   "refs": [
+    "Ido1978/dbe5a1"
+   ],
+   "said": [
+    18.0,
+    1976.0
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 40,
+   "star": true,
+   "sentence": "\\paragraph{The Block Detector} The block detector, introduced by Casey and Nutt in 1986 \\cite{Casey1986}\\claim*{Casey1986/9a954e}, in response to increasing demand, shifted focus towards cost-effective detector architectures to maximise the clinical utility of PET.",
+   "refs": [
+    "Casey1986/9a954e"
+   ],
+   "said": [
+    1986.0
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 48,
+   "star": true,
+   "sentence": "\\paragraph{Scintillators, Timing and Scale} In the 1980s, available fast-response scintillators such as BaF\\textsubscript{2} and CsF successfully demonstrated the advantages of time-of-flight (TOF) PET, but they had drawbacks, notably low density and low photofraction, which compromised performance enough for BGO to continue as the dominant PET scintillator \\cite{Moses2007}\\claim*{Moses2007/37c442,Moses2007/97543d}.",
+   "refs": [
+    "Moses2007/37c442",
+    "Moses2007/97543d"
+   ],
+   "said": [
+    1980.0,
+    2.0
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 49,
+   "star": true,
+   "sentence": "Lutetium oxyorthosilicate (LSO) in the late 1980s, and lutetium--yttrium oxyorthosilicate (LYSO) by the early 2000s, delivered the faster decay times that TOF-PET demanded without the density and photofraction drawbacks of predecessor scintillators, effectively reviving the technique and gaining popularity over BGO in spite of their slightly higher price \\cite{Moses2007}\\claim*{Moses2007/a66733,Moses2007/42cbcd}.",
+   "refs": [
+    "Moses2007/a66733",
+    "Moses2007/42cbcd"
+   ],
+   "said": [
+    1980.0,
+    2000.0
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 51,
+   "star": true,
+   "sentence": "Most recently, long axial field-of-view systems such as the uEXPLORER and the Biograph Quadra have raised sensitivity by an order of magnitude by extending the axial length of the scanner to cover the whole body \\cite{Vandenberghe2020, SLHD2021}\\claim*{Vandenberghe2020/1641db,SLHD2021/44acb4}.",
+   "refs": [
+    "Vandenberghe2020/1641db",
+    "SLHD2021/44acb4"
+   ],
+   "said": []
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 77,
+   "star": true,
+   "sentence": "It first \\emph{thermalises}, losing energy through Coulomb scattering with the surrounding medium over a path of length that typically ranges from a fraction of a millimetre to several millimetres (depending on the isotope) before combining with an electron at near-rest \\cite{Levin1999}\\claim*{Levin1999/1de3d5,Levin1999/0597ca,Levin1999/845764}.",
+   "refs": [
+    "Levin1999/1de3d5",
+    "Levin1999/0597ca",
+    "Levin1999/845764"
+   ],
+   "said": []
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 84,
+   "star": true,
+   "sentence": "The pair is not quite at rest, however, and its residual momentum spreads the opening angle about \\degs{180} with a full width at half maximum (FWHM) of roughly \\degs{0.5} \\cite{Colombino1965}\\claim*{Colombino1965/44f285}.",
+   "refs": [
+    "Colombino1965/44f285"
+   ],
+   "said": [
+    180.0,
+    0.5
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 96,
+   "star": true,
+   "sentence": "Contemporary clinical systems use windows of 4--6\\,ns, as on the Biograph Vision Quadra \\cite{Prenosil2022}\\claim*{Prenosil2022/a1a849} and Biograph mMR \\cite{Karlberg2016}\\claim*{Karlberg2016/14aa6e}.",
+   "refs": [
+    "Prenosil2022/a1a849"
+   ],
+   "said": [
+    4.0,
+    6.0
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 96,
+   "star": true,
+   "sentence": "Contemporary clinical systems use windows of 4--6\\,ns, as on the Biograph Vision Quadra \\cite{Prenosil2022}\\claim*{Prenosil2022/a1a849} and Biograph mMR \\cite{Karlberg2016}\\claim*{Karlberg2016/14aa6e}.",
+   "refs": [
+    "Karlberg2016/14aa6e"
+   ],
+   "said": [
+    4.0,
+    6.0
+   ]
+  },
+  {
+   "file": "src/thesis/chapters/02-literature-review.tex",
+   "line": 166,
+   "star": true,
+   "sentence": "The band gap therefore sets a hard ceiling on light yield before any transport or quantum-efficiency losses are counted \\cite{Lempicki1993}\\claim*{Lempicki1993/d84b46}.",
+   "refs": [
+    "Lempicki1993/d84b46"
+   ],
+   "said": []
+  }
+ ],
  "unsourced": [
   {
    "file": "src/thesis/main.tex",
@@ -336,78 +591,19 @@
  "given_file": "report/given-thesis.txt",
  "unclaimed": [
   {
-   "file": "src/thesis/chapters/01-introduction.tex",
-   "line": 31,
-   "sentence": "CT measures attenuation directly, and so can replace the radionuclide transmission scan that earlier PET systems required \\cite{Kinahan1998}.",
-   "keys": [
-    "Kinahan1998"
-   ]
-  },
-  {
-   "file": "src/thesis/chapters/01-introduction.tex",
-   "line": 34,
-   "sentence": "A piecewise-linear rescaling of Hounsfield units is consequently applied, interpolating between air and water below the breakpoint and between water and cortical bone above it, to convert the CT image into a \\keV{511} attenuation map \\cite{Burger2002,Carney2006}.",
-   "keys": [
-    "Burger2002",
-    "Carney2006"
-   ]
-  },
-  {
-   "file": "src/thesis/chapters/01-introduction.tex",
-   "line": 91,
-   "sentence": "Of the two dominant losses, solid angle and attenuation in the patient, only solid angle is a design choice rather than a fixed cost of imaging a human, coverage ranging from the order of \\qty{20}{\\percent} in a conventional ring to as much as \\qty{80}{\\percent} in long axial field-of-view scanners \\cite{Vandenberghe2020}.",
-   "keys": [
-    "Vandenberghe2020"
-   ]
-  },
-  {
-   "file": "src/thesis/chapters/02-literature-review.tex",
-   "line": 13,
-   "sentence": "\\paragraph{Origins} Positrons were discovered in 1932 by Carl Anderson, who observed the tracks of seemingly positively-charged electrons in a cloud chamber and interpreted them as the electron's antimatter counterpart \\cite{Anderson1933}.",
-   "keys": [
-    "Anderson1933"
-   ]
-  },
-  {
    "file": "src/thesis/chapters/02-literature-review.tex",
    "line": 16,
-   "sentence": "Wrenn and colleagues proposed using the back-to-back annihilation photons for coincidence localisation in 1951 \\cite{Wrenn1951}, and Brownell and Sweet built one of the first clinical positron scanners in 1953, comprised of a pair of sodium iodide detectors stepped mechanically across the head on a rectilinear gantry \\cite{Sweet1953}.",
+   "sentence": "Wrenn and colleagues proposed using the back-to-back annihilation photons for coincidence localisation in 1951 \\cite{Wrenn1951}\\claim*{Wrenn1951/18681d}, and Brownell and Sweet built one of the first clinical positron scanners in 1953, comprised of a pair of sodium iodide detectors stepped mechanically across the head on a rectilinear gantry \\cite{Sweet1953}.",
    "keys": [
-    "Wrenn1951",
     "Sweet1953"
    ]
   },
   {
    "file": "src/thesis/chapters/02-literature-review.tex",
-   "line": 21,
-   "sentence": "Anger's scintillation camera of 1958 replaced mechanical scanning with a single large NaI(Tl) crystal viewed by an array of photomultiplier tubes, positioning each event from the centroid of the light distribution \\cite{Anger1958}, a stationary-detector, position-decoding architecture that PET block detectors would later inherit.",
-   "keys": [
-    "Anger1958"
-   ]
-  },
-  {
-   "file": "src/thesis/chapters/02-literature-review.tex",
    "line": 22,
-   "sentence": "Kuhl and Edwards then demonstrated emission tomography itself in 1963, rotating a scanner about the patient and reconstructing transverse sections from the resulting projections \\cite{Kuhl1963}, several years before the equivalent was achieved with transmission X-rays \\cite{Hounsfield1973}.",
+   "sentence": "Kuhl and Edwards then demonstrated emission tomography itself in 1963, rotating a scanner about the patient and reconstructing transverse sections from the resulting projections \\cite{Kuhl1963}, several years before the equivalent was achieved with transmission X-rays \\cite{Hounsfield1973}\\claim*{Hounsfield1973/fc8eab}.",
    "keys": [
-    "Kuhl1963",
-    "Hounsfield1973"
-   ]
-  },
-  {
-   "file": "src/thesis/chapters/02-literature-review.tex",
-   "line": 25,
-   "sentence": "\\paragraph{The Move to Tomographic Rings} In 1961, a group at Brookhaven National Laboratory developed a ring of 32 sodium iodide-based coincidence detectors surrounding the head \\cite{Rankowitz1961}.",
-   "keys": [
-    "Rankowitz1961"
-   ]
-  },
-  {
-   "file": "src/thesis/chapters/02-literature-review.tex",
-   "line": 27,
-   "sentence": "By the late 1960s Brownell and the group at Massachusetts General Hospital had developed a so-called ``hybrid scanner'' comprised of two stationary planar 2D arrays of detectors, and by the early 1970s the group had developed a device of similar architecture known as the ``multi-crystal positron camera'', which had a field of view of $\\cm{27}\\times\\cm{30}$ \\cite{Burnham1972}.",
-   "keys": [
-    "Burnham1972"
+    "Kuhl1963"
    ]
   },
   {
@@ -416,88 +612,6 @@
    "sentence": "In the mid-1970s, Ter-Pogossian, Phelps and Hoffman built the positron emission transaxial tomograph (PETT) series, rings of scintillation detectors where every crystal was in coincidence with those opposite it, so that a single acquisition sampled the object along lines of response at many angles at once \\cite{Ter-Pogossian1975}.",
    "keys": [
     "Ter-Pogossian1975"
-   ]
-  },
-  {
-   "file": "src/thesis/chapters/02-literature-review.tex",
-   "line": 29,
-   "sentence": "The projections this produced were of exactly the form that filtered backprojection had been developed to invert, and the reconstruction was imported essentially intact from the single-photon and X-ray tomography described above \\cite{Phelps1975}.",
-   "keys": [
-    "Phelps1975"
-   ]
-  },
-  {
-   "file": "src/thesis/chapters/02-literature-review.tex",
-   "line": 34,
-   "sentence": "The synthesis of \\textsuperscript{18}F-fluorodeoxyglucose (FDG) in 1976 removed that constraint \\cite{Ido1978}.",
-   "keys": [
-    "Ido1978"
-   ]
-  },
-  {
-   "file": "src/thesis/chapters/02-literature-review.tex",
-   "line": 39,
-   "sentence": "\\paragraph{The Block Detector} The block detector, introduced by Casey and Nutt in 1986 \\cite{Casey1986}, in response to increasing demand, shifted focus towards cost-effective detector architectures to maximise the clinical utility of PET.",
-   "keys": [
-    "Casey1986"
-   ]
-  },
-  {
-   "file": "src/thesis/chapters/02-literature-review.tex",
-   "line": 47,
-   "sentence": "\\paragraph{Scintillators, Timing and Scale} In the 1980s, available fast-response scintillators such as BaF\\textsubscript{2} and CsF successfully demonstrated the advantages of time-of-flight (TOF) PET, but they had drawbacks, notably low density and low photofraction, which compromised performance enough for BGO to continue as the dominant PET scintillator \\cite{Moses2007}.",
-   "keys": [
-    "Moses2007"
-   ]
-  },
-  {
-   "file": "src/thesis/chapters/02-literature-review.tex",
-   "line": 49,
-   "sentence": "Lutetium oxyorthosilicate (LSO) in the late 1980s, and lutetium--yttrium oxyorthosilicate (LYSO) by the early 2000s, delivered the faster decay times that TOF-PET demanded without the density and photofraction drawbacks of predecessor scintillators, effectively reviving the technique and gaining popularity over BGO in spite of their slightly higher price \\cite{Moses2007}.",
-   "keys": [
-    "Moses2007"
-   ]
-  },
-  {
-   "file": "src/thesis/chapters/02-literature-review.tex",
-   "line": 51,
-   "sentence": "Most recently, long axial field-of-view systems such as the uEXPLORER and the Biograph Quadra have raised sensitivity by an order of magnitude by extending the axial length of the scanner to cover the whole body \\cite{Vandenberghe2020, SLHD2021}.",
-   "keys": [
-    "Vandenberghe2020",
-    "SLHD2021"
-   ]
-  },
-  {
-   "file": "src/thesis/chapters/02-literature-review.tex",
-   "line": 77,
-   "sentence": "It first \\emph{thermalises}, losing energy through Coulomb scattering with the surrounding medium over a path of length that typically ranges from a fraction of a millimetre to several millimetres (depending on the isotope) before combining with an electron at near-rest \\cite{Levin1999}.",
-   "keys": [
-    "Levin1999"
-   ]
-  },
-  {
-   "file": "src/thesis/chapters/02-literature-review.tex",
-   "line": 84,
-   "sentence": "The pair is not quite at rest, however, and its residual momentum spreads the opening angle about \\degs{180} with a full width at half maximum (FWHM) of roughly \\degs{0.5} \\cite{Colombino1965}.",
-   "keys": [
-    "Colombino1965"
-   ]
-  },
-  {
-   "file": "src/thesis/chapters/02-literature-review.tex",
-   "line": 96,
-   "sentence": "Contemporary clinical systems use windows of 4--6\\,ns, as on the Biograph Vision Quadra \\cite{Prenosil2022} and Biograph mMR \\cite{Karlberg2016}.",
-   "keys": [
-    "Prenosil2022",
-    "Karlberg2016"
-   ]
-  },
-  {
-   "file": "src/thesis/chapters/02-literature-review.tex",
-   "line": 166,
-   "sentence": "The band gap therefore sets a hard ceiling on light yield before any transport or quantum-efficiency losses are counted \\cite{Lempicki1993}.",
-   "keys": [
-    "Lempicki1993"
    ]
   }
  ],

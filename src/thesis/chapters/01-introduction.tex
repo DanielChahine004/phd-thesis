@@ -28,10 +28,10 @@ Where the radiotracer appears to accumulate, the biological process targeted by 
 Imaging a biological process through tracer uptake makes PET a functional or molecular imaging modality, as opposed to an anatomical imaging modality such as computed tomography (CT) or magnetic resonance imaging (MRI), which image the structure of the subject.
 Many modern clinical workflows employ PET in combination with CT or MRI, often in hybrid scanner systems, so that functional and anatomical information are acquired in a single session and spatially co-registered \needcite{PET/CT and PET/MRI in clinical workflows}.
 Beyond informing clinical interpretation, the anatomical scan also supports reconstruction itself.
-CT measures attenuation directly, and so can replace the radionuclide transmission scan that earlier PET systems required \cite{Kinahan1998}. However, it does so at the effective energy of the polychromatic X-ray beam ($\sim$\keV{70} at a tube voltage of 120\,kV \needcite{effective CT beam energy at 120 kVp}) rather than at \keV{511}.
+CT measures attenuation directly, and so can replace the radionuclide transmission scan that earlier PET systems required \cite{Kinahan1998}\claim*{Kinahan1998/a74191}. However, it does so at the effective energy of the polychromatic X-ray beam ($\sim$\keV{70} at a tube voltage of 120\,kV \needcite{effective CT beam energy at 120 kVp}) rather than at \keV{511}.
 The attenuation coefficients at the two energies are not related by a single scale factor, since the photoelectric contribution is non-negligible in higher-Z materials such as bone and iodinated contrast agents, and scales steeply with atomic number, whereas at \keV{511} it is negligible and attenuation is governed almost entirely by electron density.
 Two materials sharing a value in Hounsfield units (HU), the CT measure of radiodensity, may therefore differ in their attenuation at \keV{511}.
-A piecewise-linear rescaling of Hounsfield units is consequently applied, interpolating between air and water below the breakpoint and between water and cortical bone above it, to convert the CT image into a \keV{511} attenuation map \cite{Burger2002,Carney2006}.
+A piecewise-linear rescaling of Hounsfield units is consequently applied, interpolating between air and water below the breakpoint and between water and cortical bone above it, to convert the CT image into a \keV{511} attenuation map \cite{Burger2002,Carney2006}\claim*{Burger2002/0f14c7,Carney2006/ce68d7,Carney2006/85b1a2}.
 
 \paragraph{Scanner Anatomy}
 A PET scanner comprises a chain of successive transductions, where the signal is repeatedly converted from one carrier into another, with some information lost at every interface.
@@ -88,7 +88,7 @@ Almost nothing in Figure~\ref{fig:chain-emission} is under the designer's contro
 		The trunk follows only those photons that retain a valid LOR.
 		Little of what is emitted survives as usable signal, and recovering the rest is a principal driver of the cost of PET \needcite{detector material as a driver of PET cost}.
 		Losses to solid angle and crystal interaction are recovered with more detector material, whereas scattered coincidences are removed by corrections that subtract counts that are present but mispositioned.
-		Of the two dominant losses, solid angle and attenuation in the patient, only solid angle is a design choice rather than a fixed cost of imaging a human, coverage ranging from the order of \qty{20}{\percent} in a conventional ring to as much as \qty{80}{\percent} in long axial field-of-view scanners \cite{Vandenberghe2020}.
+		Of the two dominant losses, solid angle and attenuation in the patient, only solid angle is a design choice rather than a fixed cost of imaging a human, coverage ranging from the order of \qty{20}{\percent} in a conventional ring to as much as \qty{80}{\percent} in long axial field-of-view scanners \cite{Vandenberghe2020}\claim*{Vandenberghe2020/8338ba,Vandenberghe2020/7f38d9}.
 		A coincidence requires both photons, so the per-photon terms compound while the solid-angle term does not, the photons being emitted back-to-back.
 		Axial length therefore enters the coincidence rate once, and crystal thickness and light yield twice.}
 	\label{fig:photon-flow}

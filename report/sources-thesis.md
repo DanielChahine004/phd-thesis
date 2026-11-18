@@ -4,7 +4,96 @@
 
 ## Claims
 
-None yet.
+**src/thesis/chapters/01-introduction.tex:31** (`\claim*`) CT measures attenuation directly, and so can replace the radionuclide transmission scan that earlier PET systems required \cite{Kinahan1998}\claim*{Kinahan1998/a74191}.
+
+- [`Kinahan1998/a74191`](https://danielchahine004.github.io/paperstore/#/Kinahan1998/a74191), p. 2, unchecked: "It will no longer be necessary to include the standard PET transmission sources"
+
+**src/thesis/chapters/01-introduction.tex:34** (`\claim*`) A piecewise-linear rescaling of Hounsfield units is consequently applied, interpolating between air and water below the breakpoint and between water and cortical bone above it, to convert the CT image into a \keV{511} attenuation map \cite{Burger2002,Carney2006}\claim*{Burger2002/0f14c7,Carney2006/ce68d7,Carney2006/85b1a2}.
+
+- [`Burger2002/0f14c7`](https://danielchahine004.github.io/paperstore/#/Burger2002/0f14c7), p. 1, unchecked: "uses a bilinear function based on the attenuation of water and cortical bone at the CT and PET energies"
+- [`Carney2006/ce68d7`](https://danielchahine004.github.io/paperstore/#/Carney2006/ce68d7), p. 3, unchecked: "A bilinear fit to the data is made defining a break point BP corresponding to the HU value at which the lines intersect"
+- [`Carney2006/85b1a2`](https://danielchahine004.github.io/paperstore/#/Carney2006/85b1a2), p. 3, unchecked: "For the air and soft tissue values the line is uniquely defined as it passes through the air"
+
+**src/thesis/chapters/01-introduction.tex:91** (`\claim*`) Of the two dominant losses, solid angle and attenuation in the patient, only solid angle is a design choice rather than a fixed cost of imaging a human, coverage ranging from the order of \qty{20}{\percent} in a conventional ring to as much as \qty{80}{\percent} in long axial field-of-view scanners \cite{Vandenberghe2020}\claim*{Vandenberghe2020/8338ba,Vandenberghe2020/7f38d9}.
+
+- [`Vandenberghe2020/8338ba`](https://danielchahine004.github.io/paperstore/#/Vandenberghe2020/8338ba), p. 7, unchecked: "The first condition is an intrinsic effect which cannot be avoided."
+- [`Vandenberghe2020/7f38d9`](https://danielchahine004.github.io/paperstore/#/Vandenberghe2020/7f38d9), p. 9, unchecked: "At a length of 1 m, already 80% of the solid angle is covered"
+
+**src/thesis/chapters/02-literature-review.tex:14** (`\claim*`) \paragraph{Origins} Positrons were discovered in 1932 by Carl Anderson, who observed the tracks of seemingly positively-charged electrons in a cloud chamber and interpreted them as the electron's antimatter counterpart \cite{Anderson1933}\claim*{Anderson1933/9b56e8}.
+
+- [`Anderson1933/9b56e8`](https://danielchahine004.github.io/paperstore/#/Anderson1933/9b56e8), p. 1, unchecked: "seemed to be interpretable only on the basis of the existence in this case of a particle carrying a positive charge but having a mass of the same order of magnitude as that normally possessed by a free negative electron"
+
+**src/thesis/chapters/02-literature-review.tex:16** (`\claim*`) Wrenn and colleagues proposed using the back-to-back annihilation photons for coincidence localisation in 1951 \cite{Wrenn1951}\claim*{Wrenn1951/18681d}, and Brownell and Sweet built one of the first clinical positron scanners in 1953, comprised of a pair of sodium iodide detectors stepped mechanically across the head on a rectilinear gantry \cite{Sweet1953}.
+
+- [`Wrenn1951/18681d`](https://danielchahine004.github.io/paperstore/#/Wrenn1951/18681d), p. 1, unchecked: "if one were to count these 2 y-rays in coincidence, the source of activity must then lie somewhere on a straight line joining the 2 counters"
+
+**src/thesis/chapters/02-literature-review.tex:21** (`\claim*`) Anger's scintillation camera of 1958 replaced mechanical scanning with a single large NaI(Tl) crystal viewed by an array of photomultiplier tubes, positioning each event from the centroid of the light distribution \cite{Anger1958}\claim*{Anger1958/dd2514,Anger1958/c7bb16}, a stationary-detector, position-decoding architecture that PET block detectors would later inherit.
+
+- [`Anger1958/dd2514`](https://danielchahine004.github.io/paperstore/#/Anger1958/dd2514), p. 2, unchecked: "a scintillating crystal within the shield viewed by a bank of seven"
+- [`Anger1958/c7bb16`](https://danielchahine004.github.io/paperstore/#/Anger1958/c7bb16), p. 3, unchecked: "The pulses obtained from the photo tubes are applied to the signal matrix circuit which adds and subtracts the amplitudes in such a way that three output signals are obtained. Two of the signals are positioning signals"
+
+**src/thesis/chapters/02-literature-review.tex:22** (`\claim*`) Kuhl and Edwards then demonstrated emission tomography itself in 1963, rotating a scanner about the patient and reconstructing transverse sections from the resulting projections \cite{Kuhl1963}, several years before the equivalent was achieved with transmission X-rays \cite{Hounsfield1973}\claim*{Hounsfield1973/fc8eab}.
+
+- [`Hounsfield1973/fc8eab`](https://danielchahine004.github.io/paperstore/#/Hounsfield1973/fc8eab), p. 1, unchecked: "readings are taken through the head at a multitude of angles"
+
+**src/thesis/chapters/02-literature-review.tex:26** (`\claim*`) \paragraph{The Move to Tomographic Rings} In 1961, a group at Brookhaven National Laboratory developed a ring of 32 sodium iodide-based coincidence detectors surrounding the head \cite{Rankowitz1961}\claim*{Rankowitz1961/e416c7}.
+
+- [`Rankowitz1961/e416c7`](https://danielchahine004.github.io/paperstore/#/Rankowitz1961/e416c7), p. 1, unchecked: "stationary cimular array of 32 saintillation dettaJcturs"
+
+**src/thesis/chapters/02-literature-review.tex:27** (`\claim*`) By the late 1960s Brownell and the group at Massachusetts General Hospital had developed a so-called ``hybrid scanner'' comprised of two stationary planar 2D arrays of detectors, and by the early 1970s the group had developed a device of similar architecture known as the ``multi-crystal positron camera'', which had a field of view of $\cm{27}\times\cm{30}$ \cite{Burnham1972}\claim*{Burnham1972/026348,Burnham1972/5b5093}.
+
+- [`Burnham1972/026348`](https://danielchahine004.github.io/paperstore/#/Burnham1972/026348), p. 1, unchecked: "Each of the camera's two identical detectors consist of a planar array of 127 small NaI(Tl) crystals"
+- [`Burnham1972/5b5093`](https://danielchahine004.github.io/paperstore/#/Burnham1972/5b5093), p. 1, unchecked: "The sensitive field area is 27 cm x 30 cm"
+
+**src/thesis/chapters/02-literature-review.tex:29** (`\claim*`) The projections this produced were of exactly the form that filtered backprojection had been developed to invert, and the reconstruction was imported essentially intact from the single-photon and X-ray tomography described above \cite{Phelps1975}\claim*{Phelps1975/514189,Phelps1975/158f7c}.
+
+- [`Phelps1975/514189`](https://danielchahine004.github.io/paperstore/#/Phelps1975/514189), p. 8, unchecked: "employs fast Fourier transforms in the back projection of filtered projections at each discrete angle"
+- [`Phelps1975/158f7c`](https://danielchahine004.github.io/paperstore/#/Phelps1975/158f7c), p. 1, unchecked: "Many of the improvements in x-ray transmission imaging demonstrated by EM! are also possible in the field of radionuclide emission imaging"
+
+**src/thesis/chapters/02-literature-review.tex:34** (`\claim*`) The synthesis of \textsuperscript{18}F-fluorodeoxyglucose (FDG) in 1976 removed that constraint \cite{Ido1978}\claim*{Ido1978/dbe5a1}.
+
+- [`Ido1978/dbe5a1`](https://danielchahine004.github.io/paperstore/#/Ido1978/dbe5a1), p. 1, unchecked: "A convenient method for the synthesis of 18F-2-deoxy-2-fluoro-D-glucose"
+
+**src/thesis/chapters/02-literature-review.tex:40** (`\claim*`) \paragraph{The Block Detector} The block detector, introduced by Casey and Nutt in 1986 \cite{Casey1986}\claim*{Casey1986/9a954e}, in response to increasing demand, shifted focus towards cost-effective detector architectures to maximise the clinical utility of PET.
+
+- [`Casey1986/9a954e`](https://danielchahine004.github.io/paperstore/#/Casey1986/9a954e), p. 1, unchecked: "This detector represents a major development toward reducing the cost of PET."
+
+**src/thesis/chapters/02-literature-review.tex:48** (`\claim*`) \paragraph{Scintillators, Timing and Scale} In the 1980s, available fast-response scintillators such as BaF\textsubscript{2} and CsF successfully demonstrated the advantages of time-of-flight (TOF) PET, but they had drawbacks, notably low density and low photofraction, which compromised performance enough for BGO to continue as the dominant PET scintillator \cite{Moses2007}\claim*{Moses2007/37c442,Moses2007/97543d}.
+
+- [`Moses2007/37c442`](https://danielchahine004.github.io/paperstore/#/Moses2007/37c442), p. 1, unchecked: "These cameras achieved timing resolution of 500 ps and demonstrated the anticipated improvement in statistical noise"
+- [`Moses2007/97543d`](https://danielchahine004.github.io/paperstore/#/Moses2007/97543d), p. 1, unchecked: "Both have worse spatial resolution and detection efficiency than BGO."
+
+**src/thesis/chapters/02-literature-review.tex:49** (`\claim*`) Lutetium oxyorthosilicate (LSO) in the late 1980s, and lutetium--yttrium oxyorthosilicate (LYSO) by the early 2000s, delivered the faster decay times that TOF-PET demanded without the density and photofraction drawbacks of predecessor scintillators, effectively reviving the technique and gaining popularity over BGO in spite of their slightly higher price \cite{Moses2007}\claim*{Moses2007/a66733,Moses2007/42cbcd}.
+
+- [`Moses2007/a66733`](https://danielchahine004.github.io/paperstore/#/Moses2007/a66733), p. 2, unchecked: "It has a very similar attenuation length to BGO but a considerably faster decay time"
+- [`Moses2007/42cbcd`](https://danielchahine004.github.io/paperstore/#/Moses2007/42cbcd), p. 2, unchecked: "The key advance that enabled modern TOF PET was the development of new scintillator materials."
+
+**src/thesis/chapters/02-literature-review.tex:51** (`\claim*`) Most recently, long axial field-of-view systems such as the uEXPLORER and the Biograph Quadra have raised sensitivity by an order of magnitude by extending the axial length of the scanner to cover the whole body \cite{Vandenberghe2020, SLHD2021}\claim*{Vandenberghe2020/1641db,SLHD2021/44acb4}.
+
+- [`Vandenberghe2020/1641db`](https://danielchahine004.github.io/paperstore/#/Vandenberghe2020/1641db), p. 1, unchecked: "But for long objects (like body scans), it increases quadratically with scanner length and factors of 10–40"
+- [`SLHD2021/44acb4`](https://danielchahine004.github.io/paperstore/#/SLHD2021/44acb4), p. 2, unchecked: "The PET component scanner is 106 centimetres in length and is able to scan a patient from the top of the head to the upper thighs simultaneously"
+
+**src/thesis/chapters/02-literature-review.tex:77** (`\claim*`) It first \emph{thermalises}, losing energy through Coulomb scattering with the surrounding medium over a path of length that typically ranges from a fraction of a millimetre to several millimetres (depending on the isotope) before combining with an electron at near-rest \cite{Levin1999}\claim*{Levin1999/1de3d5,Levin1999/0597ca,Levin1999/845764}.
+
+- [`Levin1999/1de3d5`](https://danielchahine004.github.io/paperstore/#/Levin1999/1de3d5), p. 5, unchecked: "Betas traversing matter lose their energy through inelastic collisions with the atomic electrons"
+- [`Levin1999/0597ca`](https://danielchahine004.github.io/paperstore/#/Levin1999/0597ca), p. 18, unchecked: "our 18F calculated point source value of 0.10 mm FWHM for the positron range blurring function"
+- [`Levin1999/845764`](https://danielchahine004.github.io/paperstore/#/Levin1999/845764), p. 17, unchecked: "The positron range blurring function for 15O is over a factor of four wider at FWHM and FWTM than for 18F"
+
+**src/thesis/chapters/02-literature-review.tex:84** (`\claim*`) The pair is not quite at rest, however, and its residual momentum spreads the opening angle about \degs{180} with a full width at half maximum (FWHM) of roughly \degs{0.5} \cite{Colombino1965}\claim*{Colombino1965/44f285}.
+
+- [`Colombino1965/44f285`](https://danielchahine004.github.io/paperstore/#/Colombino1965/44f285), p. 3, unchecked: "(a box: Water (+4 C) curve FWHM about 9 mrad (~0.5 deg) read from Fig. 1; the paper states no FWHM in text)"
+
+**src/thesis/chapters/02-literature-review.tex:96** (`\claim*`) Contemporary clinical systems use windows of 4--6\,ns, as on the Biograph Vision Quadra \cite{Prenosil2022}\claim*{Prenosil2022/a1a849} and Biograph mMR \cite{Karlberg2016}\claim*{Karlberg2016/14aa6e}.
+
+- [`Prenosil2022/a1a849`](https://danielchahine004.github.io/paperstore/#/Prenosil2022/a1a849), p. 2, unchecked: "Coincidence time window 4.7 ns"
+
+**src/thesis/chapters/02-literature-review.tex:96** (`\claim*`) Contemporary clinical systems use windows of 4--6\,ns, as on the Biograph Vision Quadra \cite{Prenosil2022}\claim*{Prenosil2022/a1a849} and Biograph mMR \cite{Karlberg2016}\claim*{Karlberg2016/14aa6e}.
+
+- [`Karlberg2016/14aa6e`](https://danielchahine004.github.io/paperstore/#/Karlberg2016/14aa6e), p. 3, unchecked: "Time coincidence window is 5.86 ns"
+
+**src/thesis/chapters/02-literature-review.tex:166** (`\claim*`) The band gap therefore sets a hard ceiling on light yield before any transport or quantum-efficiency losses are counted \cite{Lempicki1993}\claim*{Lempicki1993/d84b46}.
+
+- [`Lempicki1993/d84b46`](https://danielchahine004.github.io/paperstore/#/Lempicki1993/d84b46), p. 1, unchecked: "Thus the maximum possible number of electronhole pairs is"
 
 ## Facts
 
