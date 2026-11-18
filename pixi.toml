@@ -63,6 +63,11 @@ cmd = "uv tool run --quiet --python 3.12 --from git+https://github.com/DanielCha
 [tasks.papers-fetch]
 cmd = "uv run --quiet --python 3.12 --no-project python tools/papers.py fetch"
 
+# the writing rules a pattern can decide (docs/writing-rules.md, docs/writing-terms.md),
+# after a build: the log, units, em-dashes, abbreviations spelled out per chapter
+[tasks.check]
+cmd = "uv run --quiet --python 3.12 --no-project python tools/check.py"
+
 [dependencies]
 tectonic = ">=0.16.9,<0.17"
 uv = ">=0.12.13,<0.13"

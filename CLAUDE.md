@@ -23,12 +23,14 @@ force a redo.
 ## Overleaf
 
 The thesis lives on a paid Overleaf plan, reached through Overleaf's git
-integration: the remote `overleaf` in this clone. `pixi run sync` merges its
-edits (a merge, never a rebase) and pushes to it and to GitHub; a conflict
-stops the sync for a local fix. Overleaf's GitHub Sync is still linked but
-unused. Live TikZ compiles fine within the paid timeout.
-
-Only `src/thesis/` is set up as the Overleaf project root.
+integration: the remote `overleaf` in this clone. The project holds the contents
+of `src/thesis/` at its root and nothing else (main document `main.tex`, compiler
+pdfLaTeX). `pixi run sync` pulls its edits under `src/thesis/` and pushes that
+folder back (`tools/overleaf.py`); a conflict stops the sync for a local fix.
+Never `git push overleaf` by hand. Overleaf's GitHub Sync is still linked but
+unused. Overleaf compiles with pdfLaTeX and tectonic with XeTeX, so a figure can
+pass here and fail there; an incremental Overleaf compile can hide the failure,
+so check a change to a figure with a clean one.
 
 ## Source formatting
 
@@ -52,6 +54,12 @@ demand, and measurements copied into a comment go stale the moment a label moves
 
 ## Writing
 
+`docs/writing-rules.md` is the rubric, shared with the study papers, and
+`docs/writing-terms.md` is the thesis annex: where the annex differs (a chapter
+outline, background in the literature review), it wins. `pixi run check` tests what
+a pattern can decide (the build log, units, em-dashes, abbreviations spelled out in
+each chapter); CI runs it after the build, and `pixi run sync` reports it.
+
 - **Units:** `\keV{511}`, `\mm{20}`, `\ps{200}` — not raw `\qty`. Add new
   shorthands in `units.tex` beside the existing ones. For a range use siunitx's
   `\qtyrange{4}{12}{\nano\second}` directly.
@@ -64,8 +72,8 @@ demand, and measurements copied into a comment go stale the moment a label moves
   the line directly below it, whether or not anything points there yet. Prefixes
   are `ch:`, `sec:`, `fig:`, `eq:`. Retrofitting labels across a finished thesis
   costs far more than writing them as you go.
-- **House style:** British spelling (-ise, -isation), `---` unspaced for an
-  em-dash, ``` ``…'' ``` for quotes, and a `~` before every cross-reference
+- **House style:** British spelling (-ise, -isation), no em-dashes (writing
+  rule R10), ``` ``…'' ``` for quotes, and a `~` before every cross-reference
   (`Figure~\ref{...}`, `part~1`).
 - **Bibliography keys are `AuthorYear`** — `Casey1986`, `Moskal2014`. The style
   is `numeric`, so keys never reach the page. `paperstore add` makes them from

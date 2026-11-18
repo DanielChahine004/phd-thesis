@@ -65,6 +65,10 @@ jobs:
       - name: thesis
         run: pixi run build
 
+      # the writing rules a pattern can decide; runs after the build because it reads the log
+      - name: writing checks
+        run: pixi run check
+
       - name: collect
         run: |
           mkdir -p out

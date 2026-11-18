@@ -73,6 +73,11 @@ if ($overleaf) {
 	if ($LASTEXITCODE -ne 0) { throw 'pulling Overleaf failed - see above' }
 }
 
+# the writing rules a pattern can decide: reported, never blocking, so text typed on
+# Overleaf shows here (tools/check.py; the build log part reads the last build)
+uv run --quiet --python 3.12 --no-project python (Join-Path $root 'tools\check.py')
+if ($LASTEXITCODE -ne 0) { Write-Host 'writing checks found the above (not blocking the sync)' }
+
 # --- 3. the bibliography: merge with thesis-papers -------------------------
 
 # entries added or edited here (on Overleaf, say) go to thesis-papers, and its

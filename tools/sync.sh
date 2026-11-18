@@ -51,6 +51,10 @@ if [ -n "$overleaf" ]; then
 		|| abort 'pulling Overleaf failed - see above'
 fi
 
+# the writing rules a pattern can decide: reported, never blocking, so text typed on
+# Overleaf shows here (tools/check.py; the build log part reads the last build)
+uv run --quiet --python 3.12 --no-project python "$root/tools/check.py" || echo 'writing checks found the above (not blocking the sync)'
+
 # --- 3. the bibliography: merge with thesis-papers -------------------------
 
 # entries added or edited here (on Overleaf, say) go to thesis-papers, and its
