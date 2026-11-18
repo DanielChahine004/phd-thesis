@@ -39,17 +39,17 @@
 % The entry lists live in macros so both passes iterate the SAME data -- edit
 % an entry in one place only. Loop variables deliberately avoid \year (TeX
 % primitive), \r (accent) and \text (amsmath): shadowing those is fragile.
-% Write \& in a label as \protect\&: under pdfLaTeX (Overleaf, TeX Live 2026) a bare
-% \& in the list breaks the label loop with "Did you forget a semicolon?".
+% Superscripts in a label are math, $^{18}$F: under pdfLaTeX (Overleaf, TeX Live 2026)
+% \textsuperscript in the list breaks the label loop ("Did you forget a semicolon?").
 %
 % Above the axis --  year/row/label x/label:
 \def\tlabove{%
 	1932/1/0/{Anderson\\positron discovered},
-	1953/1/3.2/{Brownell \protect\& Sweet\\rectilinear probes},
+	1953/1/3.2/{Brownell \& Sweet\\rectilinear probes},
 	1975/2/5.4/{PETT\\ring scanners},
-	1976/1/6.9/{\textsuperscript{18}F-FDG\\synthesised},
+	1976/1/6.9/{$^{18}$F-FDG\\synthesised},
 	1983/2/8.19/{first TOF PET\\BaF$_2$, abandoned},
-	1986/1/9.5/{Casey \protect\& Nutt\\block detector},
+	1986/1/9.5/{Casey \& Nutt\\block detector},
 	2006/1/12.1/{commercial TOF PET\\on LSO/LYSO},
 	2018/2/13.4/{uEXPLORER\\total-body}}
 % Below the axis -- year/row/label x/colour/label. Mostly the borrowed lineage
@@ -57,7 +57,7 @@
 \def\tlbelow{%
 	1951/2/2.3/tlpositron/{Wrenn \emph{et al.}\\coincidence proposed},
 	1958/1/3.9/tlsingle/{Anger\\scintillation camera},
-	1963/2/5.26/tlsingle/{Kuhl \protect\& Edwards\\emission tomography},
+	1963/2/5.26/tlsingle/{Kuhl \& Edwards\\emission tomography},
 	1973/1/6.6/tlsingle/{Hounsfield\\X-ray CT},
 	1989/1/9.3/tlpositron/{LSO\\discovered},
 	2013/1/12.2/tlpositron/{SiPM\\digital PET}}
