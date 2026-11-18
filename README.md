@@ -78,8 +78,12 @@ sync with both versions shown, before anything is pushed.
 The thesis is on a paid Overleaf plan, reached through its git integration: the
 clone has the Overleaf project as a second remote, `overleaf`
 (`git remote add overleaf https://git@git.overleaf.com/<project id>`, signed in
-with an Overleaf git token). `pixi run sync` merges Overleaf's edits and pushes
-to it as well as to GitHub, so there is nothing to press in Overleaf. Overleaf's
+with an Overleaf git token). `pixi run sync` pulls Overleaf's edits and pushes
+to it as well as to GitHub, so there is nothing to press in Overleaf. The Overleaf
+project holds the contents of `src/thesis/` at its root and nothing else (its main
+document is `main.tex`): `tools/overleaf.py` pushes that folder's tree onto Overleaf's
+history and applies Overleaf's edits back under `src/thesis/`, so the tools, the
+environment and these notes stay off Overleaf. Overleaf's
 own GitHub Sync is still linked (Overleaf cannot unlink it) but is not used:
 never press its GitHub buttons, or the two routes will diverge.
 

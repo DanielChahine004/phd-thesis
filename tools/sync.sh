@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Sync with GitHub and Overleaf: commit local work, pull --rebase from GitHub,
-# merge Overleaf's edits, merge the bibliography with thesis-papers
+# pull Overleaf's edits into src/thesis/, merge the bibliography with thesis-papers
 # (tools/papers.py), push to both. The Linux twin of
 # sync.ps1. `pixi run sync [message]`. Committing first keeps uncommitted work
 # out of the rebase; safe to run when there is nothing to do.
@@ -43,11 +43,12 @@ git -C "$root" pull --rebase \
 	|| abort 'pull --rebase failed - resolve the conflict, run `git rebase --continue`, then `pixi run sync` again'
 
 # Overleaf, if this clone has it as a remote (git remote add overleaf <its git
-# URL>): merged, not rebased, so commits already on GitHub are never rewritten
+# URL>): the project holds src/thesis/ alone, and its edits since the last sync
+# are applied under src/thesis/ and committed (tools/overleaf.py)
 overleaf="$(git -C "$root" remote | grep -x overleaf || true)"
 if [ -n "$overleaf" ]; then
-	git -C "$root" pull --no-rebase --no-edit overleaf main \
-		|| abort 'merging Overleaf failed - resolve the conflict, `git commit`, then `pixi run sync` again'
+	uv run --quiet --python 3.12 --no-project python "$root/tools/overleaf.py" pull \
+		|| abort 'pulling Overleaf failed - see above'
 fi
 
 # --- 3. the bibliography: merge with thesis-papers -------------------------
@@ -72,6 +73,6 @@ else
 	echo 'nothing to push - already in sync'
 fi
 if [ -n "$overleaf" ]; then
-	g push -q overleaf HEAD:main
-	echo 'Overleaf up to date'
+	uv run --quiet --python 3.12 --no-project python "$root/tools/overleaf.py" push \
+		|| abort 'pushing to Overleaf failed - see above'
 fi
